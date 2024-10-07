@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+  font-family: ubuntu;
+  src: url(../public/inter.ttf);
+}
+@font-face {
+  font-family: play;
+  src: url(../public/playfair.ttf);
+}
+.play{
+  font-family: play;
+}
+*{
+  font-family: ubuntu;
+  outline:none
+}
+input{
+  outline: none;
+}
+.pop{
+  max-width: 230px;
+  width: 289px;
+  margin: 0 auto;
+  height: 186px;
+  max-height: 230px;
+  background-image: url(../public/img/f.jpg);
+  background-size: cover;
+
+  mask-image: url(../public/mask.svg);
+  -webkit-mask-image:url(../public/mask.svg) ;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  background-repeat: no-repeat;
+  mask-position: center;
+}
+.anima{
+  z-index: 100;
+  animation:  anima 15s linear 12s infinite ;
+}
+.scroll-bar-hidden::-webkit-scrollbar{
+  display: none;
+}
+ul,li{
+  list-style-type: disc;
+}
+.filter_me{
+  filter: invert(55%) sepia(14%) saturate(23) hue-rotate(-45deg) brightness(119%) contrast(86%);
+}
+
+.img-comment {
+  @apply rounded-full border-[3px] border-opacity-10 border-gray-400 object-cover  size-[43px] mt-3;
+}
+.masme{
+  mask-image: linear-gradient(black 54%,transparent);
+  -webkit-mask-image:linear-gradient(black 54%,transparent); ;
+}
+span{
+  font-family: inherit;
+}
+.paragraph-container {
+  padding: 100px 20px;
+}
+
+.paragraph-container p {
+  margin-bottom: 40px;
+  opacity: 1;
+  transform: none;
+}
+.page-transition {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.page-content {
+  position: relative;
+  z-index: 10;
+}
+.container {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.box {
+  width: 300px;
+  height: 150px;
+  background-color: #f7b42c;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin: 0 auto;
+}

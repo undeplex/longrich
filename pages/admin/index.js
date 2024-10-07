@@ -82,7 +82,7 @@ export default function Admin() {
     <AdminLayout>
       
         <div className="max-w-4xl mx-auto bg-gray-100 rounded-xl min-h-screen">
-        <nav className="space-y-2 max-w-3xl mx-auto gap-3 p-4 place-items-center  w-full grid md:grid-cols-3 grid-cols-1 lg:grid-cols-3">
+        <nav className="space-y-2 max-w-3xl mx-auto gap-3 p-4 place-items-center  w-full grid md:grid-cols-3 grid-cols-2 lg:grid-cols-3">
            {links.map((link) => (
              <Link key={link.href} href={link.href}>
               <div className="bg-white hover:ring-4 hover:ring-emerald-300 relative 300 pl-7 pr-1  py-4 h-min max-w-[340px] rounded-xl">

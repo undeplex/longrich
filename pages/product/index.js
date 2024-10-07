@@ -302,7 +302,7 @@ export default function Products() {
                         <div className="">
 
                                     <div className="bg-white grid place-content-center  size-[160px] lg:size-[155px] lg:py-2 py-6 rounded-2xl ">
-                                        <img className="lg:size-full mx-auto  size-10/12 object-cover " src={`/uploads/${product.image}`} alt={product.name} width="20" />
+                                        <img className="lg:size-full mx-auto  size-[120px] object-cover " src={`/uploads/${product.image}`} alt={product.name} width="20" />
                                     </div>
                            
                                 <h2 className="break-words tri font-bold text- mt-1 ">

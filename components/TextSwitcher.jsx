@@ -81,7 +81,7 @@ const TextSwitcher = () => {
           justify-content: center;
           align-items: center;
        
-          background: url('plause9.jpg') no-repeat center center;
+          background: url('plause6.jpg') no-repeat center center;
           background-size: cover;
           background-position:center;
         }

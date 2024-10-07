@@ -70,12 +70,12 @@ export default function Admin() {
   const router = useRouter();
   const one= '/logo.svg'
   const links = [
-    { href: '/admin/orders',comment:'Pour voir la liste de tous les commandes ayant ete faites',  label: 'Commandes',icon:<ShoppingBagIcon className="size-5  text-gray-700"/> },
-    { href: '/admin/add_product',comment:'Ajouter un nouveau produit sur le catalogue et le gerer a partir de l inventaire',  label: 'Ajouter un produit',icon:<PlusIcon className="size-5  text-gray-700"/> },
-    { href: '/admin/assets',comment:'Pour supprimer les images qui ne sont associees a aucun produits',  label: 'Actif/images ',icon:<PhotoIcon className="size-5  text-gray-700"/> },
-    { href: '/admin/free',comment:'Pour voir la liste de tous les produits et avoir la possibilite des les gerer',  label: 'Inventaire',icon:<ArchiveBoxIcon className="size-5  text-gray-700"/> },
-    { href: '/admin/review',comment:'Pour approuver ou supprimer les avis sur un produit et ainsi afficher ce dernier si approuver',  label: 'Revues',icon:<UsersIcon className="size-5  text-gray-700"/> },
-    { href: '/admin/admin-community',comment:'Pour voir les messages ayant ete envoyer a partir du formulaire de contact ayant ete donner ',  label: 'Messages',icon:<ChatBubbleBottomCenterTextIcon className="size-5  text-gray-700"/> },
+    { href: '/admin/orders',comment:'',  label: 'Commandes',icon:<ShoppingBagIcon className="size-5  text-gray-700"/> },
+    { href: '/admin/add_product',comment:'',  label: 'Ajouter un produit',icon:<PlusIcon className="size-5  text-gray-700"/> },
+    { href: '/admin/assets',comment:'',  label: 'Actif/images ',icon:<PhotoIcon className="size-5  text-gray-700"/> },
+    { href: '/admin/free',comment:'',  label: 'Inventaire',icon:<ArchiveBoxIcon className="size-5  text-gray-700"/> },
+    { href: '/admin/review',comment:'',  label: 'Revues',icon:<UsersIcon className="size-5  text-gray-700"/> },
+    { href: '/admin/admin-community',comment:' ',  label: 'Messages',icon:<ChatBubbleBottomCenterTextIcon className="size-5  text-gray-700"/> },
   ];
   
   return (

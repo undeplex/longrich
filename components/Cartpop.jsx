@@ -56,7 +56,7 @@ const CartPop = () => {
                 <div key={index} className="py-1 w-full">
                     <div className="flex gap-2 border-b py-2 border-b-gray-300">
                         <div className="w-3/12">
-                            <img src={`http://localhost:5000/uploads/${item.image}`} alt={item.name} width="100" />
+                            <img src={`/uploads/${item.image}`} alt={item.name} width="100" />
                         </div>
                         <div className="w-8/12">
                             <h2 className="text-gray-700 text-lg flex justify-between gap-4 w-full">

@@ -1,53 +1,66 @@
 import { useEffect, useState } from 'react';
 import Layout from '@/components/Layout';
+
 export default function ThankYou() {
     const [order, setOrder] = useState(null);
 
     useEffect(() => {
-        const lastOrder = JSON.parse(localStorage.getItem('lastOrder')) || null;
+        const lastOrder = JSON.parse(localStorage.getItem('lastOrder'));
         if (lastOrder) {
             setOrder(lastOrder);
-            localStorage.removeItem('lastOrder');
         }
     }, []);
 
-    if (!order) return <div>Loading...</div>;
+    if (!order) {
+        return (
+            <Layout>
+                <div className="p-4 text-center">
+                    <h1 className="text-3xl">No recent order found</h1>
+                </div>
+            </Layout>
+        );
+    }
 
     return (
         <Layout>
+            <div className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg mt-6">
+                <h1 className="text-4xl font-bold text-green-600 mb-4">Thank You for Your Order!</h1>
+                <p className="text-gray-600 mb-4">We've received your order and will process it soon.</p>
 
-        <div className="px-4">
-            <h1 className="text-3xl play">Merci d'avoir commandé Chez LongrichStore</h1>
-            <p className="text-lg text-gray-500 my-4">Vous pouvez contacter le service client si vous avez des questions qui concernant la livraison </p>
-            <div className="order-details">
-                <h2 className="text-xl">Resumé de la commande</h2>
-                <p className="text-lg"><strong>Name:</strong> {order.name}</p>
-                <p className="text-lg"><strong>Email:</strong> {order.email}</p>
-                <p className="text-lg"><strong>Address:</strong> {order.address}</p>
-                <h3 className="text-lg underline">Produits commander</h3>
-                <div className="grid grid-cols-1">
-
+                <h2 className="text-2xl font-semibold mb-2">Order Summary</h2>
+                <ul className="mb-4">
                     {order.items.map((item, index) => (
-                        <div key={index} className="bg-white m-3  p-4 rounded-2xl">
-                            <div className="text-gray-500">CATEGORY</div>
-                            <img src={`http://localhost:5000/uploads/${item.image}`} alt={item.name} width="100" className="mx-auto" />
-                            <h4 className="text-xl my-2">{item.name}</h4>
-                            <p className="text-2xl">${item.price}</p>
-                        </div>
+                        <li key={index} className="p-2 border-b">
+                            <strong>{item.name}</strong> - Quantity: {item.quantity}
+                        </li>
                     ))}
+                </ul>
+
+                <h3 className="text-xl mb-2">Delivery Information</h3>
+                <p className="mb-1"><strong>Name:</strong> {order.name}</p>
+                <p className="mb-1"><strong>Email:</strong> {order.email}</p>
+                <p className="mb-1"><strong>Address:</strong> {order.address}</p>
+
+                <div className="mt-4 p-4 bg-green-50 text-green-700 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 inline-block mr-2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75l-3.75-3.75 7.5-7.5M3.75 12 9 7.5 3.75 3.75 12 12m3.75 7.5L21 15.75" />
+                    </svg>
+                    Your order is being processed! We will contact you soon for delivery.
                 </div>
             </div>
+
             <style jsx>{`
-                .order-details {
-                    border: 1px solid #ddd;
-                    padding: 20px;
+                h1 {
+                    color: #10B981;
                 }
-                .order-item {
-                    border-top: 1px solid #ddd;
-                    padding: 10px 0;
+                ul {
+                    list-style-type: none;
+                    padding-left: 0;
+                }
+                li {
+                    margin-bottom: 10px;
                 }
             `}</style>
-        </div>
         </Layout>
     );
 }

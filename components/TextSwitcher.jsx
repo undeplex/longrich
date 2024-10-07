@@ -4,23 +4,19 @@ import { gsap } from "gsap";
 const textBlocks = [
   {
     header: "Bright skin",
-    subHeader: "Super cool than you think",
+    subHeader: "NO CHANCE TO DOWNGRADE",
     paragraph: "We've been providing some top-notch product that give to your skin "
   },
-  {
-    header: "White Teeth",
-    subHeader: "As much as possible",
-    paragraph: "Using our white tea toothpaste you'll get rapidly a lightfull smile"
-  },
+ 
   {
     header: "Spotless Face",
-    subHeader: "All you need right",
+    subHeader: "YOU NEED IT RIGHT",
     paragraph: "The charcoal soap on top of the sod lotion are going to crash all the pimple"
   },
   {
-    header: "Potable water",
-    subHeader: "You can make it by your own",
-    paragraph: "We provide a saving-life water box that would let you cleanse your own water "
+    header: "Overall Being ",
+    subHeader: "FOR ALL THE BEST FOR YOU",
+    paragraph: "We provide a saving-life water box that would let you cleanse your own  "
   }
 ];
 
@@ -73,8 +69,8 @@ const TextSwitcher = () => {
           <div className="text-content ">
             By Longrich Caleb
             <h1 className="play" ref={headerRef}>{textBlocks[0].header}</h1>
-            <h3 className="play" ref={subHeaderRef}>{textBlocks[0].subHeader}</h3>
-            <p className="px-2" ref={paragraphRef}>{textBlocks[0].paragraph}</p>
+            <h3 className="play " ref={subHeaderRef}>{textBlocks[0].subHeader}</h3>
+            <p className="px-2 text-gray-300" ref={paragraphRef}>{textBlocks[0].paragraph}</p>
           </div>
           
       </div>
@@ -85,7 +81,7 @@ const TextSwitcher = () => {
           justify-content: center;
           align-items: center;
        
-          background: url('plause6.jpg') no-repeat center center;
+          background: url('plause9.jpg') no-repeat center center;
           background-size: cover;
           background-position:center;
         }

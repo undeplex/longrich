@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ShoppingBagIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 const textBlocks = [
   {
@@ -39,10 +40,12 @@ const TextSwitcherClone = () => {
           <div className="md:text-xl my-3 mx-auto w-10/12 text-gray-100"> 
                 Nous proposons  plusieurs Lotions adaptées aux peau noir
           </div>
-          <div className="bg-white md:text-lg text-gray-600 rounded-full w-[300px] mx-auto  block text-blak px-3 py-3">
-            Shop now
-            <ShoppingBagIcon className="inline size-6"/>
-          </div>
+          <Link href="/product">
+            <div className="bg-white md:text-lg text-gray-600 rounded-full w-[300px] mx-auto  block text-blak px-3 py-3">
+              Shop now
+              <ShoppingBagIcon className="inline size-6"/>
+            </div>
+          </Link>
       </div>
 
       <style jsx>{`
@@ -51,7 +54,7 @@ const TextSwitcherClone = () => {
           justify-content: center;
           align-items: center;
        
-          background: url('tellme.jpg') no-repeat center center;
+          background: url('plause8.jpg') no-repeat center center;
           background-size: cover;
           background-position:top;
         }

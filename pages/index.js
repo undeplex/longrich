@@ -30,8 +30,9 @@ export default function Home() {
 
     const fetchFeaturedProducts = async () => {
         try {//producty will be change later as we can't use no two get product stuff or whatever
-            const response = await axios.get('http://localhost:5000/producty?isPopular=featured');
-            setProducts(response.data);
+            const response = await axios.get('/product.json');
+            const take= response.data.filter(product => product.category === "lotion")
+            setProducts(take);
         } catch (err) {
             console.error('Failed to fetch products', err);
         }
@@ -54,13 +55,16 @@ export default function Home() {
           Devenez aussi partenaire et profitez de notre engagement envers la qualite, la rapidite et la securisation 
           des livraisons
         </div>
-        <button  className="  my-3  mx-auto sm:w-max w-ful text-center zi -50  bg-gradient-to-bl text-black bg-emerald-500 bg-opacity-10 px-3 py-4 rounded-xl gap-2">
-          <div className="w-max mx-aut text-lg text-gray-700">
+        <Link href="/product">
+        
+            <button  className="  my-3  mx-auto sm:w-max w-ful text-center zi -50  bg-gradient-to-bl text-black bg-emerald-500 bg-opacity-10 px-3 py-4 rounded-xl gap-2">
+            <div className="w-max mx-aut text-lg text-gray-700">
 
-                    Visiter notre shop Online
-                    <ShoppingCartIcon className="inline text-3xl w-6 ml-2"/>
-          </div>
-        </button>
+                        Visiter notre shop Online
+                        <ShoppingCartIcon className="inline text-3xl w-6 ml-2"/>
+            </div>
+            </button>
+        </Link>
         </div>
         <p className="play text-3xl text-center">Decouvrez Longrich pour</p>
         <ArrowDown className="text-center mx-auto my-1 size-8 animate-bounce"/>

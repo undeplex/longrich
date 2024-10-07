@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import CartIcon from './CartIcon';
-import { Search } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 import { Bars2Icon } from '@heroicons/react/24/solid';
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,14 +46,13 @@ const MobileMenu = () => {
         <div className="">        <button
             onClick={() => {setIsOpen(false);setToggleStyle(!toggleStyle)}}
             className="p-2 focus:outline-none underline"
-          >CLOSE THIS MENU 
+          >FERMER CE MENU<X className="size-6 inline"/> 
             
           </button>
-        <div className="flex items-center my-3">
+        <div className="flex items-center my-5">
                             <img src="/longdark.png" className="invert" width="150px"/>
                             <span className="text-[11px] text-slate-900  font-bold ">Store</span>
                         </div>
-                        <div className="text-sm my-2 text-gray-400">*Be all you got from a good well-being</div>
          
           <div className="">
           <form onSubmit={handleSearch} className="">
@@ -81,25 +80,22 @@ const MobileMenu = () => {
 
                     <div className="relative play px-2 flex my-2 gap-2 items-center">
                                
-                                <CartIcon />
                        
                     </div>
           </div>
-          <nav className=" space-y-3 text-3xl play flex px-2 flex-col justify-start float-left  w-full">
+          <nav className=" space-y-4 text-xl  flex px-2 flex-col justify-start float-left  w-full">
                     <Link href="/">
-                    <p className=" play">Acceuil</p>
+                    <p className=" ply">Acceuil</p>
                     </Link>
-                    <Link href="/admin">
-                    <p className=" play">Admin</p>
-                    </Link>
-                    <Link href="/freestyle1">
-                    <p className=" play">Shop</p>
+                   
+                    <Link href="/product">
+                    <p className=" ply">Shop</p>
                     </Link>
                     <Link href="/adhesion">
-                    <p className=" play">Adhesion</p>
+                    <p className=" ply">Adhesion</p>
                     </Link> 
                     <Link href="/player/contact-admin">
-                    <p className=" play">Contact</p>
+                    <p className=" ply">Contact</p>
                     </Link>  
 
              </nav>

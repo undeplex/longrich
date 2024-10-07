@@ -9,6 +9,7 @@ import Popup from './Popup';
 import CartPop from './Cartpop';
 import { CircleArrowLeftIcon } from 'lucide-react';
 import Trythis from './Trythis';
+import { BoltIcon } from '@heroicons/react/24/solid';
 
 export default function Layout({ children }) {
     const [searchQuery, setSearchQuery] = useState('');
@@ -40,12 +41,17 @@ export default function Layout({ children }) {
         <div className="absolute lg:block hidden border-[78px] bg-transparent top-[57px] -right-[100px] size-[360px] border-white rounded-full -10">
         </div>  
             <header className="border w-full z-50  border-b-emerald-100 fixed top-0 bg-white">
-        
+        <div  className="text-sm bg-black py-2 text-gray-200 flex items-center gap-2 px-1">
+
+        <BoltIcon className="w-6 text-gray-100"/>Ce site est toujours sous-developpement ,c'est une phase de test !PEACE
+        </div>
                
                 <div className=" lg:hidden md:hidden w-full flex gap-2 px-2 items-center my-2 justify-between ">
                     <div className="flex">
                     <div className="flex items-center">
+                        <Link href="/">
                             <div className="play">LONGRICH store Co.</div>
+                        </Link>
                     </div>
                     
                     </div>
@@ -91,7 +97,7 @@ export default function Layout({ children }) {
 
                     {/* <div className="flex items-center gap-2 ">
                     <Link href="/admin">Admin</Link>
-                    <Link href="/freestyle1">Shop</Link>
+                    <Link href="/product">Shop</Link>
                     <Link href="/stable">Stable&copy;</Link>
                     <Link href="/player/community-join">join</Link>
                     <Link href="/player/contact-admin">contact</Link>
@@ -119,7 +125,7 @@ export default function Layout({ children }) {
                     <Trythis/>
 
 
-                    <Link href="/freestyle1">
+                    <Link href="/product">
                         <button className="gap-1 text-sm bg-black flex  items-center text-white py-2 px-3 rounded-full">
                             Shop now
                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 mr- inline">
@@ -131,7 +137,7 @@ export default function Layout({ children }) {
                     </div>
                        <div className="flex w-max  mx-auto mt-2 items-center gap-2 ">
                     <Link href="/admin">Admin</Link>
-                    <Link href="/freestyle1">Shop</Link>
+                    <Link href="/product">Shop</Link>
                     <Link href="/saturday">saturday <CircleArrowLeftIcon className="inline  text-gray-600 size-4" /></Link>
                     <Link href="/adhesion">join</Link>
                     <Link href="/player/contact-admin">contact</Link>
@@ -143,7 +149,7 @@ export default function Layout({ children }) {
             </header>
 
 
-            <main className="min-h-screen border- overflow-x-hidden bg-gray-50  pb-4 sm:pt-[87px] pt-[60px] z-50">{children}</main>
+            <main className="min-h-screen border- overflow-x-hidden bg-gray-50  pb-4 sm:pt-[127px] pt-[120px] z-50">{children}</main>
 
 
 

@@ -26,22 +26,38 @@ export default function Checkout() {
                 address,
                 items: cart,
             };
-            await axios.post('http://localhost:5000/orders', order);
+    
+            // Create a message for WhatsApp
+            const orderDetails = cart
+                .map(item => `• ${item.name} - Qty: ${item.quantity}`)
+                .join("\n");
+    
+            const message = `*Order Details*\nName: ${name}\nEmail: ${email}\nAddress: ${address}\nItems:\n${orderDetails}`;
+            
+            // WhatsApp URL format (you can replace the phone number with the real one)
+            const whatsappURL = `https://wa.me/0892946807?text=${encodeURIComponent(message)}`;
+    
+            // Save the order in localStorage (optional)
             localStorage.setItem('lastOrder', JSON.stringify(order));
             localStorage.removeItem('cart');
             setCart([]);
+    
+            // Redirect to WhatsApp
+            window.open(whatsappURL, '_blank');
+    
+            // Optionally redirect to thank you page
             router.push('/thank-you');
         } catch (error) {
             console.error('Failed to submit order', error);
         }
     };
-
+    
     return (
         <Layout>
 
         <div className="px-3 ma max-w-4xl mx-auto bg-white m-3">
             <h1 className="play text-2xl">Checkout</h1>
-            <div className="bg-gray-500 bg-opacity-5 p-5 rounded-xl text-sm">
+            <div className="bg-gray-500 bg-opacity-5 p-4 rounded-xl text-sm">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-gray-500 ">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
             </svg>Vos informations ne seront pas utiliser en dehors de la livraisons, on tient a rappeller que les livraisons physiques ne sont possible 
@@ -81,7 +97,7 @@ export default function Checkout() {
                     />
                 </label>
                 <button className="bg-black p-4 text-white text-lg" type="submit">Placer la commande</button>
-                Les autres informations seront recuper ulterieurement 
+                Les autres informations seront recuperer ulterieurement 
 
             </form>
             <style jsx>{`

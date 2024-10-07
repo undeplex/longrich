@@ -54,7 +54,7 @@ const TextSwitcherClone = () => {
           justify-content: center;
           align-items: center;
        
-          background: url('plause8.jpg') no-repeat center center;
+          background: url('pexels-arishojaei-27872945.jpg') no-repeat center center;
           background-size: cover;
           background-position:top;
         }

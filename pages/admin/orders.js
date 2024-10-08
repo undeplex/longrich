@@ -11,7 +11,7 @@ export default function Orders() {
 
     const fetchOrders = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/orders');
+            const response = await axios.get('https://express-xzfm.onrender.com/orders');
             setOrders(response.data);
         } catch (error) {
             console.error('Failed to fetch orders', error);

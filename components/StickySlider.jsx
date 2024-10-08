@@ -38,7 +38,7 @@ const StickySlider = () => {
         {Array.from({ length: 9 }, (_, i) => (
           <div
             key={i}
-            className="min-w-[140px] h-[22px] bg- flex items-center justify-center rounded-full text-sm snap-center"
+            className="min-w-[140px] h-[22px] bg- flex items-center bg-transparent py-4 border border-black justify-center rounded-full text-sm snap-center"
           >
             Option {i + 1}
           </div>

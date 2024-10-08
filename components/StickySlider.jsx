@@ -18,7 +18,7 @@ const StickySlider = () => {
   };
 
   return (
-    <div className="relative h-24 flex justify-center items-center">
+    <div className="relative h-[25px] flex justify-center items-center">
       {/* Left fade effect */}
       <div className="absolute left-0 h-full w-12 bg-gradient-to-r from-white via-white/50 to-transparent pointer-events-none"></div>
 
@@ -38,7 +38,7 @@ const StickySlider = () => {
         {Array.from({ length: 9 }, (_, i) => (
           <div
             key={i}
-            className="min-w-[200px] h-24 bg-blue-500 flex items-center justify-center rounded-lg shadow-lg snap-center"
+            className="min-w-[140px] h-[22px] bg- flex items-center justify-center rounded-full text-sm snap-center"
           >
             Option {i + 1}
           </div>

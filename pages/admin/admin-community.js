@@ -10,7 +10,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5000/admin/messages');
+        const { data } = await axios.get('https://express-xzfm.onrender.com/messages');
         setMessages(data);
       } catch (error) {
         console.error('Failed to fetch messages', error);

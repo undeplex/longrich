@@ -35,7 +35,7 @@ export default function Checkout() {
             const message = `*Order Details*\nName: ${name}\nEmail: ${email}\nAddress: ${address}\nItems:\n${orderDetails}`;
             
             // WhatsApp URL format (you can replace the phone number with the real one)
-            const whatsappURL = `https://wa.me/0892946807?text=${encodeURIComponent(message)}`;
+            const whatsappURL = `https://wa.me/+243990664406?text=${encodeURIComponent(message)}`;
     
             // Save the order in localStorage (optional)
             localStorage.setItem('lastOrder', JSON.stringify(order));

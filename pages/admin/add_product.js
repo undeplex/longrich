@@ -24,7 +24,7 @@ export default function Add_product() {
 
         try {
             if (form.id) {
-                await axios.put(`http://localhost:5000/products/${form.id}`, formData, {
+                await axios.put(`https://express-xzfm.onrender.com/products/${form.id}`, formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }

@@ -7,7 +7,7 @@
 
     // useEffect(() => {
     //     // Fetch pending reviews
-    //     axios.get('http://localhost:5000/admin/reviews')
+    //     axios.get('n/reviews')
     //         .then(response => setReviews(response.data.reviews))
     //         .catch(error => console.error('Failed to fetch reviews', error));
     // }, []);
@@ -77,7 +77,7 @@ export default function AdminReviews() {
     }, []);
    
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:5000/review/${id}`)
+        axios.delete(`https://express-xzfm.onrender.com/review/${id}`)
             .then(() => {
                 setReviews(reviews.filter(review => review.id !== id));
             })

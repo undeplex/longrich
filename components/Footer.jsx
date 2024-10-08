@@ -32,26 +32,26 @@ export default function Footer() {
                 
           </div>
           <div>
-            <ul className="text-left ">
+            <ul className="text-left  ">
               <li className="list-none text-gray-200 bo fon-bold">Liens Rapides</li>
               <Link href="/">
               
-                <li className="list-none text-gray-500 my-1">Acceuil</li>
+                <li className="list-none text-gray-500 my-2 text-sm">Acceuil</li>
               </Link>
               <Link href="/adhesion">
               
-                <li className="list-none text-gray-500 my-1">Adhesion</li>
+                <li className="list-none text-gray-500 my-2 text-sm">Adhesion</li>
               </Link>
               <Link href="/player/contact-admin">
               
-                <li className="list-none text-gray-500 my-1">Contacter Nous</li>
+                <li className="list-none text-gray-500 my-2 text-sm">Contacter Nous</li>
               </Link>
               <Link href="/product">
               
-                <li className="list-none text-gray-500 my-1">Catalogue de produit</li>
+                <li className="list-none text-gray-500 my-2 text-sm">Catalogue de produit</li>
               </Link>
               <Link href="/admin">
-                <li className="list-none flex items-center gap-1 text-gray-500 ">
+                <li className="list-none flex items-center text-sm my-2 gap-1 text-gray-500 ">
                   
                 <ExclamationCircleIcon className="w-6 inline text-red-500"/>
 
@@ -63,10 +63,10 @@ export default function Footer() {
           </div>
           <div>
             <ul className="text-left sm:border-0 border-t pt-2 w-masss">
-              <li className="list-none text-gray-200 bo mb-1 fon-bold">Mention Legale</li>
-              <li className="list-none text-gray-500 my-1">Politique de confidentialite</li>
-              <li className="list-none text-gray-500 my-1">Condition general de vente</li>
-              <li className="list-none text-gray-500 my-1">Politique de cookie</li>
+              <li className="list-none text-gray-200 bo mb-2 text-sm fon-bold">Mention Legale</li>
+              <li className="list-none text-gray-500 text-sm my-2">Politique de confidentialite</li>
+              <li className="list-none text-gray-500 my-2 text-sm">Condition general de vente</li>
+              <li className="list-none text-gray-500 my-2 text-sm">Politique de cookie</li>
             </ul>
           </div>
           <div></div>

@@ -40,7 +40,7 @@ useEffect(() => {
 
 const fetchProducts = async () => {
   try {
-      const response = await axios.get('http://localhost:5000/products', {
+      const response = await axios.get('https://express-xzfm.onrender.com/products', {
           params: { search, category: selectedCategory, sort, page, limit: 5 },
       });
       setProducts(response.data.products);

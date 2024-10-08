@@ -108,7 +108,7 @@ const handleDelete = async (productId) => {
 
   const fetchCategories = async () => {
     try {
-        const response = await axios.get('http://localhost:5000/categories');
+        const response = await axios.get('https://express-xzfm.onrender.com/categories');
         setCategories(response.data);
     } catch (err) {
         console.error('Failed to fetch categories', err);
@@ -285,7 +285,7 @@ const handleSortChange = (sortOption) => {
                                     </td>
                                     <td className="  flex justify-center ">
 
-                                    <img className="scal " src={`http://localhost:5000/uploads/${product.image}`} alt={product.name} width="62"  />
+                                    <img className="scal " src={`https://express-xzfm.onrender.com/uploads/${product.image}`} alt={product.name} width="62"  />
                     
                                     </td>
                 <td class=" border-b border-gray-200">

@@ -28,7 +28,7 @@ const StickySlider = () => {
       {/* Slider Container */}
       <div
         ref={sliderRef}
-        className="flex space-x-4 overflow-x-auto scrollbar-hide px-4 snap-x snap-mandatory scroll-smooth"
+        className="flex space-x-4 overflow-x-auto scrollbar-hidden scrollbar-hide px-4 snap-x snap-mandatory scroll-smooth"
         style={{
           maskImage: 'linear-gradient(to right, transparent 0%, white 10%, white 90%, transparent 100%)',
           WebkitMaskImage: 'linear-gradient(to right, transparent 0%, white 10%, white 90%, transparent 100%)',
@@ -38,7 +38,7 @@ const StickySlider = () => {
         {Array.from({ length: 9 }, (_, i) => (
           <div
             key={i}
-            className="min-w-[140px] h-[22px] bg- flex items-center bg-transparent py-4 border border-black justify-center rounded-full text-sm snap-center"
+            className="min-w-[140px] h-[22px] bg- flex items-center bg-transparent py-4 border border-black justify-center scrollbar-hide rounded-full text-sm snap-center"
           >
             Option {i + 1}
           </div>
@@ -48,13 +48,13 @@ const StickySlider = () => {
       {/* Controls */}
       <button
         onClick={scrollLeft}
-        className="absolute left-4 p-2 bg-gray-300 rounded-full shadow-md"
+        className="absolute hidden left-4 p-2 bg-gray-300 rounded-full shadow-md"
       >
         &#9664;
       </button>
       <button
         onClick={scrollRight}
-        className="absolute right-4 p-2 bg-gray-300 rounded-full shadow-md"
+        className="absolute hidden right-4 p-2 bg-gray-300 rounded-full shadow-md"
       >
         &#9654;
       </button>

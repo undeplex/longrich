@@ -29,7 +29,7 @@ const EditProduct = () => {
 
   useEffect(() => {
     if (id) {
-      axios.get(`http://localhost:5000/products/${id}`)
+      axios.get(`https://express-xzfm.onrender.com/products/${id}`)
         .then(response => {
           setForm({ ...response.data, image: null });
           setImagePreview(`http://localhost:5000/uploads/${response.data.image}`);

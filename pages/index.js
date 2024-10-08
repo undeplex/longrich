@@ -41,7 +41,7 @@ export default function Home() {
         <Layout>
             
 
-        <div className="bg-gray-50 relative  lg:max-w-5xl max-w-4xl overdl overflow-hidden  mx-auto min-h-screen">   
+        <div className="bg-gray-100 relative  lg:max-w-5xl max-w-4xl overdl overflow-hidden  mx-auto min-h-screen">   
        <section>
         
         <TextSwitcher/>

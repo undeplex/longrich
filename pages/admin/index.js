@@ -85,7 +85,7 @@ export default function Admin() {
         <nav className="space-y-2 max-w-3xl mx-auto gap-3 p-4 place-items-center  w-full grid md:grid-cols-3 grid-cols-1 lg:grid-cols-3">
            {links.map((link) => (
              <Link key={link.href} href={link.href}>
-              <div className="bg-white rounded-2xl hover:ring-4 hover:ring-gray-300 relative 300 pl-7 pr-1  py-4 h-min max-w-[340px] rounded">
+              <div className="bg-white rounded-2xl hover:ring-4 hover:ring-gray-300 relative 300 pl-7 pr-1  py-4 h-min min-w-[340px] rounded">
 
                <span className="flex sm:text-xl text-lg font-bold  play items-center ga justify-betwee gap-2 w-full ">
                <span className="bg-black bg-opacity-5 grid place-content-center  rounded-full size-10"> {link.icon}</span>

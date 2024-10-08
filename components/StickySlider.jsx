@@ -18,7 +18,7 @@ const StickySlider = () => {
   };
 
   return (
-    <div className="relative h-[25px] flex justify-center items-center">
+    <div className="relative bg-transparent py-4 h-[55px] flex justify-center items-center">
       {/* Left fade effect */}
       <div className="absolute left-0 h-full w-12 bg-gradient-to-r from-white via-white/50 to-transparent pointer-events-none"></div>
 

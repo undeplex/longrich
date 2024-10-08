@@ -11,7 +11,7 @@ const ViewProduct = () => {
 
   useEffect(() => {
     if (id) {
-      axios.get(`http://localhost:5000/products/${id}`)
+      axios.get(`https://express-xzfm.onrender.com/${id}`)
         .then(response => setProduct(response.data))
         .catch(err => console.error('Failed to fetch product', err));
     }

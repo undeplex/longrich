@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import StickySlider from '@/components/StickySlider';
 import Layout from '@/components/Layout';
 import Comment from '@/components/Comment';
 import { Button } from '@/components/ui/button';
@@ -43,6 +44,7 @@ export default function Home() {
 
         <div className="bg-gray-100 relative  lg:max-w-5xl max-w-4xl overdl overflow-hidden  mx-auto min-h-screen">   
        <section>
+<StickySlider/>
         
         <TextSwitcher/>
         <div className=" px-2  -100 text-center flex wma  flex-col gap-1 mt-8 s justify-between ">

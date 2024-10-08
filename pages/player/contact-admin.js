@@ -20,7 +20,7 @@ export default function ContactAdmin() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/admin/messages', formData);
+            await axios.post('https://express-xzfm.onrender.com/admin/messages', formData);
             alert('Message sent to admin!');
             setFormData({ name: '', email: '', message: '' }); // Reset form
         } catch (error) {

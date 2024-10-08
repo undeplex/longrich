@@ -88,7 +88,7 @@ const MobileMenu = () => {
                     <p className=" ply">Acceuil</p>
                     </Link>
                    
-                    <Link href="/product">
+                    <Link href="/freestyle1">
                     <p className=" ply">Shop</p>
                     </Link>
                     <Link href="/adhesion">

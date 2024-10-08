@@ -54,7 +54,7 @@ export default function Products() {
 
     // const fetchCategories = async () => {
     //     try {
-    //         const response = await axios.get('http://localhost:5000/categories');
+    //         const response = await axios.get('https://express-xzfm.onrender.com/categories');
     //         setCategories(response.data);
     //     } catch (err) {
     //         console.error('Failed to fetch categories', err);
@@ -81,7 +81,7 @@ export default function Products() {
 
     const fetchCategories = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/categories');
+            const response = await axios.get('https://express-xzfm.onrender.com/categories');
             setCategories(response.data);
         } catch (err) {
             console.error('Failed to fetch categories', err);
@@ -106,7 +106,7 @@ export default function Products() {
 
     const fetchProducts = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/products', {
+            const response = await axios.get('https://express-xzfm.onrender.com/products', {
                 params: { search, category: selectedCategory, sort, page, limit: 8 },
             });
             setProducts(response.data.products);
@@ -136,7 +136,7 @@ export default function Products() {
 
     // const fetchProducts = async () => {
     //     try {
-    //         const response = await axios.get('http://localhost:5000/products', {
+    //         const response = await axios.get('https://express-xzfm.onrender.com/products', {
     //             params: {
     //                 category: filterCategory,
     //                 page: currentPage,
@@ -312,7 +312,7 @@ export default function Products() {
                         <Link href={`/freestyle1/${product.id}`}>
                         <div className="">
                                 <div className="bg-white grid place-content-center lg:size-[195px] lg:py-2 py-6 rounded-2xl ">
-                                    <img className="lg:size-[134px] mx-auto  md:size-[120px] size-[100px] object-cover " src={`http://localhost:5000/uploads/${product.image}`} alt={product.name} width="20" />
+                                    <img className="lg:size-[134px] mx-auto  md:size-[120px] size-[100px] object-cover " src={`https://express-xzfm.onrender.com/uploads/${product.image}`} alt={product.name} width="20" />
                                 </div>
                                 <h2 className="break-words font-bold text- mt-1 ">
                                     {product.name} Longrich

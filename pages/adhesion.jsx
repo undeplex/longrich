@@ -21,7 +21,7 @@ export default function Adhesion() {
         e.preventDefault();
         try {
             
-            await axios.post('http://localhost:5000/community/join', formData);
+            await axios.post('https://express-xzfm.onrender.com/community/join', formData);
             alert('Joined the community!');
             setFormData({ name: '', email: '' }); // Reset form
         } catch (error) {

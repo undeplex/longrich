@@ -12,17 +12,17 @@ const MessageList = () => {
   }, []);
 
   const fetchMessages = async () => {
-    const response = await axios.get('http://localhost:5000/admin/messages');
+    const response = await axios.get('https://express-xzfm.onrender.com/admin/messages');
     setMessages(response.data);
   };
 
   const deleteMessage = async (id) => {
-    await axios.delete(`http://localhost:5000/admin/messages/${id}`);
+    await axios.delete(`https://express-xzfm.onrender.com/admin/messages/${id}`);
     fetchMessages(); // Rafraîchir la liste des messages après suppression
   };
 
   const markAsRead = async (id) => {
-    const response = await axios.patch(`http://localhost:5000/admin/messages/${id}/read`);
+    const response = await axios.patch(`https://express-xzfm.onrender.com/admin/messages/${id}/read`);
     setMessages(messages.map(msg => msg.id === id ? response.data : msg));
   };
 

@@ -30,7 +30,7 @@ export default function ProductPage() {
 
     useEffect(() => {
         if (id) {
-            axios.get(`http://localhost:5000/products/${id}`)
+            axios.get(`https://express-xzfm.onrender.com/products/${id}`)
                 .then(response => {
                     setProduct(response.data);
                     setIsInCart(checkIfInCart(response.data));
@@ -42,13 +42,13 @@ export default function ProductPage() {
     }, [id]);
 
     const fetchRelatedProducts = (subCategory) => {
-        axios.get('http://localhost:5000/products', { params: { subCategory } })
+        axios.get('https://express-xzfm.onrender.com/products', { params: { subCategory } })
             .then(response => setRelatedProducts(response.data.products.filter(prod => prod.id !== id)))
             .catch(error => console.error('Failed to fetch related products', error));
     };
 
     const fetchReviews = (productId) => {
-        axios.get(`http://localhost:5000/reviews?productId=${productId}`)
+        axios.get(`https://express-xzfm.onrender.com/reviews?productId=${productId}`)
             .then(response => setReviews(response.data))
             .catch(error => console.error('Failed to fetch reviews', error));
     };
@@ -60,7 +60,7 @@ export default function ProductPage() {
 
     const handleReviewSubmit = (e) => {
         e.preventDefault();
-        axios.post(`http://localhost:5000/reviews`, { ...review, productId: id })
+        axios.post(`https://express-xzfm.onrender.com/reviews`, { ...review, productId: id })
             .then(() => {
                 alert('Review submitted for approval');
                 setReview({ name: '', email: '', comment: '', rating: 1 });
@@ -72,7 +72,7 @@ export default function ProductPage() {
 
 
     const fetchReviewCount = (productId) => {
-        axios.get(`http://localhost:5000/products/${productId}/review-count`)
+        axios.get(`https://express-xzfm.onrender.com/products/${productId}/review-count`)
             .then(response => setReviewCount(response.data.count))
             .catch(error => console.error('Failed to fetch review count', error));
     };
@@ -135,7 +135,7 @@ export default function ProductPage() {
 
                  </div>
                  
-                 <img className="mx-auto lg:w-[395px] block  md:w-[470px] w-[214px] py-3" src={`http://localhost:5000/uploads/${product?.image}`} alt={product?.name} width="400" />
+                 <img className="mx-auto lg:w-[395px] block  md:w-[470px] w-[214px] py-3" src={`https://express-xzfm.onrender.com/uploads/${product?.image}`} alt={product?.name} width="400" />
 </div>
 
    <div className=" lg:w-9/12 md:w-10/12 lg:pt-10 md:pt-9">
@@ -338,7 +338,7 @@ export default function ProductPage() {
                         <div key={relatedProduct.id} className=" mx-auto">
                             <Link href={`/freestyle1/${relatedProduct.id}`}>
                                
-                                    <img src={`http://localhost:5000/uploads/${relatedProduct.image}`} alt={relatedProduct.name} className="w-[120px] mx-auto block" />
+                                    <img src={`https://express-xzfm.onrender.com/uploads/${relatedProduct.image}`} alt={relatedProduct.name} className="w-[120px] mx-auto block" />
                                     <p className="font-semibold text-lg">{relatedProduct.name}</p>
                                     <p className=" text-gray-900 ">${product.price}
                         

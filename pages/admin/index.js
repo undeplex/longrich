@@ -9,7 +9,7 @@
 
 //   useEffect(() => {
 //     const fetchProducts = async () => {
-//       const { data } = await axios.get('http://localhost:5000/producty');
+//       const { data } = await axios.get('https://express-xzfm.onrender.com/producty');
 //       setProducts(data);
 //     };
 //     fetchProducts();

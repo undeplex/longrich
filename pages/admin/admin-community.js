@@ -19,7 +19,7 @@ export default function AdminDashboard() {
 
     const fetchCommunityMembers = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5000/community/members');
+        const { data } = await axios.get('https://express-xzfm.onrender.com/community/members');
         setCommunityMembers(data);
       } catch (error) {
         console.error('Failed to fetch community members', error);

@@ -30,9 +30,8 @@ export default function Home() {
 
     const fetchFeaturedProducts = async () => {
         try {//producty will be change later as we can't use no two get product stuff or whatever
-            const response = await axios.get('/product.json');
-            const take= response.data.filter(product => product.category === "lotion")
-            setProducts(take);
+            const response = await axios.get('https://express-xzfm.onrender.com/producty?isPopular=featured');
+            setProducts(response.data);
         } catch (err) {
             console.error('Failed to fetch products', err);
         }
@@ -55,16 +54,13 @@ export default function Home() {
           Devenez aussi partenaire et profitez de notre engagement envers la qualite, la rapidite et la securisation 
           des livraisons
         </div>
-        <Link href="/product">
-        
-            <button  className="  my-3  mx-auto sm:w-max w-ful text-center zi -50  bg-gradient-to-bl text-black bg-emerald-500 bg-opacity-10 px-3 py-4 rounded-xl gap-2">
-            <div className="w-max mx-aut text-lg text-gray-700">
+        <button  className="  my-3  mx-auto sm:w-max w-ful text-center zi -50  bg-gradient-to-bl text-black bg-emerald-500 bg-opacity-10 px-3 py-4 rounded-xl gap-2">
+          <div className="w-max mx-aut text-lg text-gray-700">
 
-                        Visiter notre shop Online
-                        <ShoppingCartIcon className="inline text-3xl w-6 ml-2"/>
-            </div>
-            </button>
-        </Link>
+                    Visiter notre shop Online
+                    <ShoppingCartIcon className="inline text-3xl w-6 ml-2"/>
+          </div>
+        </button>
         </div>
         <p className="play text-3xl text-center">Decouvrez Longrich pour</p>
         <ArrowDown className="text-center mx-auto my-1 size-8 animate-bounce"/>
@@ -88,7 +84,7 @@ export default function Home() {
                 {products.map((product) => (
                    <div key={product.id} className="m-3 bg-gradient-to-b from-white via-white to-transparent mx-auto  rounded-xl lg:p-8 md:p-6 p-3   max-w-[290px]">
                         <p className="px-2 py-1 text-sm bg-emerald-500 text-emerald-500 w-max my-2 bg-opacity-15 ">{product.price - 67}% off</p>
-                    <img className="lg:size-[125px] md:size-[120px] size-[100px] object-cover " src={`http://localhost:5000/uploads/${product.image}`} alt={product.name} width="20" />
+                    <img className="lg:size-[125px] md:size-[120px] size-[100px] object-cover " src={`https://express-xzfm.onrender.com/uploads/${product.image}`} alt={product.name} width="20" />
                     
                     
                         <Link href={`/freestyle1/${product.id}`}>

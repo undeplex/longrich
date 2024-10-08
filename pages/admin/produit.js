@@ -19,7 +19,7 @@ export default function Admin() {
 
     const fetchProducts = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/products', {
+            const response = await axios.get('https://express-xzfm.onrender.com/products', {
                 params: {
                     keywordsearch: searchQuery,
                     page: currentPage,
@@ -45,13 +45,13 @@ export default function Admin() {
 
     const handleEdit = (product) => {
         setForm({ ...product, existingImage: product.image });
-        setImagePreview(`http://localhost:5000/uploads/${product.image}`);
+        setImagePreview(`https://express-xzfm.onrender.com/uploads/${product.image}`);
         document.getElementById('my_modal_4').style.display='block';
     };
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/products/${id}`);
+            await axios.delete(`https://express-xzfm.onrender.com/products/${id}`);
             fetchProducts();
         } catch (err) {
             console.error('Failed to delete product', err);
@@ -70,7 +70,7 @@ export default function Admin() {
 
     const handleDeleteSelected = async () => {
         try {
-            await Promise.all(selectedProducts.map(id => axios.delete(`http://localhost:5000/products/${id}`)));
+            await Promise.all(selectedProducts.map(id => axios.delete(`https://express-xzfm.onrender.com/products/${id}`)));
             setSelectedProducts([]);
             fetchProducts();
         } catch (err) {
@@ -85,7 +85,7 @@ export default function Admin() {
   
     const handleView = (product) => {
         setForm({ ...product, existingImage: product.image });
-        setImagePreview(`http://localhost:5000/uploads/${product.image}`);
+        setImagePreview(`https://express-xzfm.onrender.com/uploads/${product.image}`);
         document.getElementById('my_modal_5').style.display = 'block';
     };
 
@@ -112,13 +112,13 @@ export default function Admin() {
 
         try {
             if (form.id) {
-                await axios.put(`http://localhost:5000/products/${form.id}`, formData, {
+                await axios.put(`https://express-xzfm.onrender.com/products/${form.id}`, formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }
                 });
             } else {
-                await axios.post('http://localhost:5000/products', formData, {
+                await axios.post('https://express-xzfm.onrender.com/products', formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }
@@ -169,7 +169,7 @@ export default function Admin() {
                                     </div>
                                     <div className="  flex justify-center w-max">
 
-                                    <img className=" " src={`http://localhost:5000/uploads/${product.image}`} alt={product.name} width="67"  />
+                                    <img className=" " src={`https://express-xzfm.onrender.com/uploads/${product.image}`} alt={product.name} width="67"  />
                                     </div>
                                     <div className="text-gray-800 text-center  w-[200px] first text-lg font-bold ">{product.name}</div>
                                     <div className="text-gray-00 text-center w-[120px] first text-lg  text-emerald-800 rounded-full px-2 py-1 bg-emerald-600 bg-opacity-15  ">{product.category}</div>

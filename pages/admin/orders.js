@@ -20,7 +20,7 @@ export default function Orders() {
 
     const handleDeleteOrder = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/orders/${id}`);
+            await axios.delete(`https://express-xzfm.onrender.com/orders/${id}`);
             setOrders(orders.filter(order => order.id !== id));
         } catch (error) {
             console.error('Failed to delete order', error);

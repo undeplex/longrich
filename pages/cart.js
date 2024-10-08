@@ -31,7 +31,7 @@
 //                 <div>
 //                     {cart.map((item, index) => (
 //                         <div key={index} className="cart-item">
-//                             <img src={`http://localhost:5000/uploads/${item.image}`} alt={item.name} width="100" />
+//                             <img src={`https://express-xzfm.onrender.com/uploads/${item.image}`} alt={item.name} width="100" />
 //                             <div>
 //                                 <h2>{item.name}</h2>
 //                                 <p>${item.price}</p>
@@ -105,7 +105,7 @@ export default function Cart() {
                         <div key={index} className="py-1 w-full">
                             <div className="flex gap-2 border-b py-2 border-b-gray-300">
                                 <div className="w-3/12">
-                                    <img src={`http://localhost:5000/uploads/${item.image}`} alt={item.name} width="100" />
+                                    <img src={`https://express-xzfm.onrender.com/uploads/${item.image}`} alt={item.name} width="100" />
                                 </div>
                                 <div className="w-8/12">
                                     <h2 className="text-emerald-700 flex justify-between gap-4 w-full">

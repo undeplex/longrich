@@ -13,7 +13,7 @@
     // }, []);
 
     // const approveReview = (id) => {
-    //     axios.patch(`http://localhost:5000/admin/reviews/approve/${id}`)
+    //     axios.patch(`https://express-xzfm.onrender.com/admin/reviews/approve/${id}`)
     //         .then(response => {
     //             alert('Review approved');
     //             setReviews(reviews.filter(review => review.id !== id));
@@ -55,14 +55,14 @@ export default function AdminReviews() {
 
     useEffect(() => {
         // Fetch pending reviews
-        axios.get('http://localhost:5000/admin/reviews')
+        axios.get('https://express-xzfm.onrender.com/admin/reviews')
             .then(response => setReviews(response.data.reviews))
             .catch(error => console.error('Failed to fetch reviews', error));
            
     }, []);
 
     const approveReview = (id) => {
-        axios.patch(`http://localhost:5000/admin/reviews/approve/${id}`)
+        axios.patch(`https://express-xzfm.onrender.com/admin/reviews/approve/${id}`)
             .then(response => {
                 alert('Review approved');
                 setReviews(reviews.filter(review => review.id !== id));
@@ -71,7 +71,7 @@ export default function AdminReviews() {
     };
     useEffect(() => {
         // Fetch all reviews, or filter by product ID if needed
-        axios.get('http://localhost:5000/reviews?approved=false')
+        axios.get('https://express-xzfm.onrender.com/reviews?approved=false')
             .then(response => setReviews(response.data))
             .catch(error => console.error('Failed to fetch reviews', error));
     }, []);

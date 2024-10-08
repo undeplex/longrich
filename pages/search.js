@@ -7,7 +7,7 @@ export default function Search({ query }) {
 
     useEffect(() => {
         if (query) {
-            axios.get(`http://localhost:5000/producty?keywordsearch=${query}`)
+            axios.get(`https://express-xzfm.onrender.com/producty?keywordsearch=${query}`)
                 .then(response => setProducts(response.data))
                 .catch(error => console.error(error));
         }
@@ -31,7 +31,7 @@ export default function Search({ query }) {
                 {products.map(product => (
                    <div key={product.id} className="m-3 bg--100 border-2 border-dotted bg-opacity-50 p-8  rounded-3xl w-[260px]">
                    <h2 className="font-bold text-lg">{product.name}</h2>
-                   <img className="size-[120px] object-cover" src={`http://localhost:5000/uploads/${product.image}`} alt={product.name} width="100" />
+                   <img className="size-[120px] object-cover" src={`https://express-xzfm.onrender.com/uploads/${product.image}`} alt={product.name} width="100" />
                    <div className="flex items-center justify-between">
                    <p className="text-[20px]  font-semibold text-gray-900">${product.price}
                    

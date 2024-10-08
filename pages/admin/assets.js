@@ -11,7 +11,7 @@ export default function Assets() {
 
     const fetchImages = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/unused-images');
+            const response = await axios.get('https://express-xzfm.onrender.com/unused-images');
             setImages(response.data);
         } catch (err) {
             console.error('Failed to fetch unused images', err);
@@ -20,7 +20,7 @@ export default function Assets() {
 
     const handleDelete = async (image) => {
         try {
-            await axios.delete(`http://localhost:5000/unused-images/${image}`);
+            await axios.delete(`https://express-xzfm.onrender.com/unused-images/${image}`);
             fetchImages();
         } catch (err) {
             console.error('Failed to delete image', err);
@@ -37,7 +37,7 @@ export default function Assets() {
             <ul>
                 {images.map((image, index) => (
                     <li key={index}>
-                        <img src={`http://localhost:5000/uploads/${image}`} alt={image} width="100" />
+                        <img src={`https://express-xzfm.onrender.com/uploads/${image}`} alt={image} width="100" />
                         <button onClick={() => handleDelete(image)}>Delete</button>
                     </li>
                 ))}

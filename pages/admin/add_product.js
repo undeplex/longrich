@@ -30,7 +30,7 @@ export default function Add_product() {
                     }
                 });
             } else {
-                await axios.post('http://localhost:5000/products', formData, {
+                await axios.post('https://express-xzfm.onrender.com/products', formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }

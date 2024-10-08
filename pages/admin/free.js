@@ -53,7 +53,7 @@ const fetchProducts = async () => {
   // ... Other handlers remain the same
   const handleDeleteImage = async (image) => {
     try {
-        await axios.delete(`http://localhost:5000/unused-images/${image}`);
+        await axios.delete(`https://express-xzfm.onrender.com/unused-images/${image}`);
         fetchImages();
     } catch (err) {
         console.error('Failed to delete image', err);
@@ -68,7 +68,7 @@ const handleDelete = async (productId) => {
   if (!confirmDelete) return;
 
   try {
-      await axios.delete(`http://localhost:5000/products/${productId}`);
+      await axios.delete(`https://express-xzfm.onrender.com/products/${productId}`);
       fetchProducts(); // Refresh product list after deletion
   } catch (err) {
       console.error('Failed to delete product', err);
@@ -87,7 +87,7 @@ const handleDelete = async (productId) => {
 
   const handleDeleteSelected = async () => {
       try {
-          await Promise.all(selectedProducts.map(id => axios.delete(`http://localhost:5000/products/${id}`)));
+          await Promise.all(selectedProducts.map(id => axios.delete(`https://express-xzfm.onrender.com/products/${id}`)));
           setSelectedProducts([]);
           fetchProducts();
       } catch (err) {
@@ -334,7 +334,7 @@ const handleSortChange = (sortOption) => {
               </button>
             </div>
 
-            <img className=" " src={`http://localhost:5000/uploads/${selectedProduct.image}`} alt={selectedProduct.name} width="165"  />
+            <img className=" " src={`https://express-xzfm.onrender.com/uploads/${selectedProduct.image}`} alt={selectedProduct.name} width="165"  />
 
               <h2 className="text-2xl font-bol mb-3 ply">{selectedProduct.name}</h2>
               <h2 className="text-xl font-bold text-emerald-950 mb-1 ">~ USD ${selectedProduct.price}/USD ${selectedProduct.priceDiscount}</h2>

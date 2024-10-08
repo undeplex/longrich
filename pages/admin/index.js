@@ -82,10 +82,10 @@ export default function Admin() {
     <AdminLayout>
       
         <div className="max-w-4xl mx-auto bg-gray-100 rounded-xl min-h-screen">
-        <nav className="space-y-2 max-w-3xl mx-auto gap-3 p-4 place-items-center  w-full grid md:grid-cols-3 grid-cols-2 lg:grid-cols-3">
+        <nav className="space-y-2 max-w-3xl mx-auto gap-3 p-4 place-items-center  w-full grid md:grid-cols-3 grid-cols-1 lg:grid-cols-3">
            {links.map((link) => (
              <Link key={link.href} href={link.href}>
-              <div className="bg-white hover:ring-4 hover:ring-emerald-300 relative 300 pl-7 pr-1  py-4 h-min max-w-[340px] rounded-xl">
+              <div className="bg-white rounded-2xl hover:ring-4 hover:ring-gray-300 relative 300 pl-7 pr-1  py-4 h-min max-w-[340px] rounded">
 
                <span className="flex sm:text-xl text-lg font-bold  play items-center ga justify-betwee gap-2 w-full ">
                <span className="bg-black bg-opacity-5 grid place-content-center  rounded-full size-10"> {link.icon}</span>
@@ -96,8 +96,8 @@ export default function Admin() {
 
                {link.comment}
                </span>
-               <div className="absolute  r top-1/2 -left-0 -translate-x-1/2 -translate-y-1/2 size-8 bg-gray-100 rounded-full"></div>
-               <div className="absolute top-3 right-3  size-4 ring-4 ring-gray-400 ring-opacity-15 bg-gray-00 bg-gray-400 bg-opacity-10 rounded-full"></div>
+               <div className="absolute  r top-1/2 -left-0 -translate-x-1/2 -translate-y-1/2  bg-gray-100 rounded-full"></div>
+               <div className="absolute top-3 right-3  size-4 ring-4 ring-gray-400 ring-opacity-5 bg-gray-00 bg-gray-400 bg-opacity-10 rounded-full"></div>
 
               </div>
 

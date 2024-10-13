@@ -4,7 +4,7 @@ import axios from 'axios';
 import Layout from '@/components/Layout';
 import { useAtom } from 'jotai';
 import { useRouter } from 'next/router';
-import { cartAtomWithStorage } from '../../atoms/cart';
+import { cartAtomWithStorage } from '@/atoms/cart';
 import { ArrowDown, Home, LucideRocket } from 'lucide-react';
 import Perks from '@/components/Perks';
 import { ChatBubbleLeftRightIcon, ShoppingBagIcon} from '@heroicons/react/24/solid';

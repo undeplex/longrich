@@ -72,7 +72,7 @@ export default function Products() {
 
     const fetchProducts = async () => {
         try {
-            const response = await axios.get('api/products', {
+            const response = await axios.get('/api/products', {
                 params: { search, category: selectedCategory, sort, page, limit: 4 },
             });
             setProducts(response.data.products);

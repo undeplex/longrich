@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { Product } from '../../lib/sequelize';
+import { Product } from '@/lib/sequelize';
 
 export default async (req, res) => {
     try {

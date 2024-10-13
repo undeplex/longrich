@@ -40,7 +40,7 @@ useEffect(() => {
 
 const fetchProducts = async () => {
   try {
-      const response = await axios.get('https://express-xzfm.onrender.com/products', {
+      const response = await axios.get('/api/products', {
           params: { search, category: selectedCategory, sort, page, limit: 5 },
       });
       setProducts(response.data.products);
@@ -53,7 +53,7 @@ const fetchProducts = async () => {
   // ... Other handlers remain the same
   const handleDeleteImage = async (image) => {
     try {
-        await axios.delete(`https://express-xzfm.onrender.com/unused-images/${image}`);
+        await axios.delete(`/api/unused-images/${image}`);
         fetchImages();
     } catch (err) {
         console.error('Failed to delete image', err);
@@ -68,7 +68,7 @@ const handleDelete = async (productId) => {
   if (!confirmDelete) return;
 
   try {
-      await axios.delete(`https://express-xzfm.onrender.com/products/${productId}`);
+      await axios.delete(`/api/productSimulate/${productId}`);
       fetchProducts(); // Refresh product list after deletion
   } catch (err) {
       console.error('Failed to delete product', err);
@@ -87,7 +87,7 @@ const handleDelete = async (productId) => {
 
   const handleDeleteSelected = async () => {
       try {
-          await Promise.all(selectedProducts.map(id => axios.delete(`https://express-xzfm.onrender.com/products/${id}`)));
+          await Promise.all(selectedProducts.map(name => axios.delete(`/api/products/${encodeURIComponent(name)}`)));
           setSelectedProducts([]);
           fetchProducts();
       } catch (err) {
@@ -108,7 +108,7 @@ const handleDelete = async (productId) => {
 
   const fetchCategories = async () => {
     try {
-        const response = await axios.get('https://express-xzfm.onrender.com/categories');
+        const response = await axios.get('/api/categories');
         setCategories(response.data);
     } catch (err) {
         console.error('Failed to fetch categories', err);
@@ -285,7 +285,7 @@ const handleSortChange = (sortOption) => {
                                     </td>
                                     <td className="  flex justify-center ">
 
-                                    <img className="scal " src={`https://express-xzfm.onrender.com/uploads/${product.image}`} alt={product.name} width="62"  />
+                                    <img className="scal " src={`/uploads/${product.image}`} alt={product.name} width="62"  />
                     
                                     </td>
                 <td class=" border-b border-gray-200">
@@ -334,7 +334,7 @@ const handleSortChange = (sortOption) => {
               </button>
             </div>
 
-            <img className=" " src={`https://express-xzfm.onrender.com/uploads/${selectedProduct.image}`} alt={selectedProduct.name} width="165"  />
+            <img className=" " src={`/uploads/${selectedProduct.image}`} alt={selectedProduct.name} width="165"  />
 
               <h2 className="text-2xl font-bol mb-3 ply">{selectedProduct.name}</h2>
               <h2 className="text-xl font-bold text-emerald-950 mb-1 ">~ USD ${selectedProduct.price}/USD ${selectedProduct.priceDiscount}</h2>
@@ -367,28 +367,6 @@ const handleSortChange = (sortOption) => {
          
             </tbody>
           </table>
-
-
-
-
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
           <div>
             <div className="flex items-center mt-12">
@@ -424,27 +402,11 @@ const handleSortChange = (sortOption) => {
       </div>
     </div>
   
-
-  
-
-  
     </AdminLayout>
- 
-
-
-
-    
-    
-
-
-
 
     </div>
   );
 };
-
-
-
 
 //to get product from the server side using the server side rendering stuff from next js
 

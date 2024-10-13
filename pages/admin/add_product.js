@@ -24,13 +24,13 @@ export default function Add_product() {
 
         try {
             if (form.id) {
-                await axios.put(`https://express-xzfm.onrender.com/products/${form.id}`, formData, {
+                await axios.put(`/api/products/${form.id}`, formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }
                 });
             } else {
-                await axios.post('https://express-xzfm.onrender.com/products', formData, {
+                await axios.post('/api/products', formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }

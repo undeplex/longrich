@@ -1,8 +1,22 @@
+<<<<<<< HEAD
 import multer from 'multer';
 import fs from 'fs';
 import { Product } from '@/lib/sequilize';
 import path from 'path';
 import { promisify } from 'util';
+=======
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import axios from 'axios';
+import Layout from '@/components/Layout';
+import { useAtom } from 'jotai';
+import { useRouter } from 'next/router';
+import { cartAtomWithStorage } from '@/atoms/cart';
+import { ArrowDown, Home, LucideRocket } from 'lucide-react';
+import Perks from '@/components/Perks';
+import { ChatBubbleLeftRightIcon, ShoppingBagIcon} from '@heroicons/react/24/solid';
+import Faq from '@/components/Faq';
+>>>>>>> ed1da6980910d6bdcbb01d42cdec75cb4f7fb347
 
 const unlinkAsync = promisify(fs.unlink);
 

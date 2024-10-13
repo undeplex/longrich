@@ -1,7 +1,11 @@
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
 import { Product } from '@/lib/sequilize';
+=======
+import { Product } from '@/lib/sequelize';
+>>>>>>> ed1da6980910d6bdcbb01d42cdec75cb4f7fb347
 
 export default async (req, res) => {
     try {

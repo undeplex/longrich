@@ -20,7 +20,7 @@ export default function ThankYouPage() {
     - Total: ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0)}
     - Address: ${address}`;
     
-    const whatsappNumber = '0990664406';
+    const whatsappNumber = '+243990664406';
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`);
   };
 

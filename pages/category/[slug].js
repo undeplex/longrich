@@ -55,11 +55,10 @@ export default function CategoryPage({ initialProducts, category }) {
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5L15.75 12l-7.5 7.5" />
         </svg>
-        <a href={`/category/${product.category.toLowerCase()}`} className="capitalize">{product?.category}</a>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5L15.75 12l-7.5 7.5" />
-        </svg>
-        <span>{product.name}</span>
+        <span>
+{category.charAt(0).toUpperCase() + category.slice(1)}
+</span>
+        
     </div>
 </div>
       <h1 className="text-3xl font-bold text-center mb-6">

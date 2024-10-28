@@ -46,7 +46,7 @@ export default function Index({ lifestyleProducts, reviews }) {
         <HomeBanner />
         <h1 className="text-2xl bg-gray-100 p-5 mb-7 w-10/12 mx-auto rounded-xl ">
           Find products that will change your life for the better because you deserve it all ,and we'll get you there
-<button className="bg-white mx-auto  block px-5 py-4 rounded-full> Where to go? </button>
+<button className="bg-white mx-auto  block px-5 py-4 rounded-full"> Where to go? </button>
         </h1>
         <div>
           <h1 className="text-3xl border p-3 rounded-full w-11/12 mx-auto border-black mb-7 px-4">

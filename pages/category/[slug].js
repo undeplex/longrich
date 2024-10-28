@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { useState, useEffect } from 'react';
+import { ChevronDown, Home, LucideRocket } from 'lucide-react';
 import ReactPaginate from 'react-paginate';
 import ProductList from '../../components/ProductList';
 import Header from '@/components/Header';

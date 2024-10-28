@@ -44,11 +44,11 @@ export default function Index({ lifestyleProducts, reviews }) {
     <div className="relative w-full z-30 pt-6">
       <div>
         <HomeBanner />
-        <h1 className="text-4xl px-3 mb-7">
-          Find products that will change your life for the better because you deserve it
+        <h1 className="text-2xl bg-gray-100 p-5 mb-7">
+          Find products that will change your life for the better because you deserve it all ,and we'll get you there
         </h1>
         <div>
-          <h1 className="text-4xl border p-3 rounded-full w-11/12 mx-auto border-black mb-7 px-4">
+          <h1 className="text-3xl border p-3 rounded-full w-11/12 mx-auto border-black mb-7 px-4">
             Best Seller Lotions
           </h1>
           <div className="bg-gray-100">
@@ -56,7 +56,7 @@ export default function Index({ lifestyleProducts, reviews }) {
           </div>
         </div>
         <Link href="/products">
-          <span className="text-blue-500 underline text-3xl max- ma w-max my-3 mx-auto block">The product List</span>
+          <span className="text-blue-500 underline text-2xl max- ma w-max my-3 mx-auto block">The product List</span>
         </Link>
         
         <TextSlider />

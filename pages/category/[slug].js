@@ -42,7 +42,7 @@ export default function CategoryPage({ initialProducts, category }) {
   };
 
   return (
-    <div className="p-6 max-w-[789px] mx-auto">
+    <div className=" max-w-[789px] mx-auto">
         <div className="flex mb-3">
             <Link href="/">
                 <span>Home</span>/

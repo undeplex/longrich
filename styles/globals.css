@@ -8,7 +8,7 @@
 
 /* Apply the font globally */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: sans-serif;
 }
 
 
@@ -21,7 +21,7 @@ body {
   font-family: play;
 }
 *{
-  font-family: 'Inter',sans-serif;
+  font-family: sans-serif;
   outline:none
 }
 input{

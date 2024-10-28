@@ -56,7 +56,7 @@ export default function ProductsPage({ products, categories }) {
       setFilteredProducts(filtered);
       setItemOffset(0);
       setLoading(false); // End loading
-    }, 1000); // Simulate a 1-second loading delay
+    }, 3000); // Simulate a 1-second loading delay
   };
 
   useEffect(() => {

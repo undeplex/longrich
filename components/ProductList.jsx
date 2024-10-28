@@ -46,12 +46,9 @@ export default function ProductList({ products }) {
 
   return (
     <div>
-      {/* Filter button to simulate filtering */}
-      <button onClick={handleFilter} className="mb-4 p-2 bg-gray-300 rounded-md">
-        Simulate Filter
-      </button>
+      
 
-      {isFiltering && <Loader />} {/* Show loader during filtering */}
+      
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-4">
         {products.map((product) => (

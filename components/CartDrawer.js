@@ -70,9 +70,9 @@ export default function CartDrawer({ isOpen, onClose }) {
         )}
       </div>
       </div>
-      <div className="fixed overflow-y-scroll right-0 bottom-0 lg:w-1/3  w-full bg-gray-800 px-2 py-3  transition-transform transform duration-300">
+      <div className="fixed overflow-y-scroll right-0 bottom-0 lg:w-1/3  w-full bg-gray-100 px-2 py-3  transition-transform transform duration-300">
     <div className="flex justify-between  items-center my-3 ">
-                <h2 className="text-lg font text-gray-200">SubTotal(4items) </h2>
+                <h2 className="text-lg font text-gray-600">SubTotal(4items) </h2>
                 <h2 className="text-lg font ">USD {getTotal()} </h2>
         </div>
         <Link href="/checkout">
@@ -81,20 +81,7 @@ export default function CartDrawer({ isOpen, onClose }) {
               </button>
         </Link>
 
-        <div className="flex items-center justify-between text- mt-2 ">
-            <div>
-                
-            </div>
-            <div>
-                Securite Guarantie de vos donnees
-            </div>
-            <div className="bg-black p-2 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-white">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
-            </svg>
-
-            </div>
-        </div>
+        
     </div>
     </div>
   );

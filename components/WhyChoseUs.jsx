@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function WhyChoseUs() {
   return (
-    <div  className="my-14">
+    <div  className="my-14 px-6">
         <div className="text-4xl text-gray-600 mb-6 text-center play font-bold">
             Pourquoi chosir Longrichstore By Caleb
         </div>

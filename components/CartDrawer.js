@@ -70,7 +70,7 @@ export default function CartDrawer({ isOpen, onClose }) {
         )}
       </div>
       </div>
-      <div className="fixed overflow-y-scroll right-0 bottom-0 lg:w-1/3  w-full bg-gray-100 px-2 py-3  transition-transform transform duration-300">
+      <div className="fixed overflow-y-scroll right-0 bottom-0 lg:w-1/3  w-full bg-gray-100 px-2 py-3  transition-transform v transform duration-300">
     <div className="flex justify-between  items-center my-3 ">
                 <h2 className="text-lg font text-gray-600">SubTotal(4items) </h2>
                 <h2 className="text-lg font ">USD {getTotal()} </h2>

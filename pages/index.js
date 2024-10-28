@@ -44,7 +44,7 @@ export default function Index({ lifestyleProducts, reviews }) {
     <div className="relative w-full z-30 pt-6">
       <div>
         <HomeBanner />
-        <h1 className="text-2xl bg-gray-100 p-5 mb-7">
+        <h1 className="text-2xl bg-gray-100 p-5 mb-7 w-10/12 mx-auto rounded-xl ">
           Find products that will change your life for the better because you deserve it all ,and we'll get you there
         </h1>
         <div>

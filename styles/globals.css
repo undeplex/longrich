@@ -3,26 +3,20 @@
 @tailwind utilities;
 
 
-/* In styles/globals.css */
-/* globals.css */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
-body {
-    font-family: 'Open Sans', sans-serif;
-}
 
 
 
 @font-face {
-  font-family: ubuntu;
-  src: url(../public/adineue\ PRO.otf);
+  font-family: openz;
+  src: url(../public/OpenSans-VariableFont_wdth,wght.ttf);
 }
 
 .play{
   font-family: play;
 }
 *{
-  font-family: 'Open Sans',sans-serif;
+  font-family:openz,sans-serif;
   outline:none
 }
 input{

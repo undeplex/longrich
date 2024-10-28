@@ -49,7 +49,7 @@ export default function Index({ lifestyleProducts, reviews }) {
         </h1>
         <div>
           <h1 className="text-4xl border p-3 rounded-full w-11/12 mx-auto border-black mb-7 px-4">
-            Best Seller Lotion
+            Best Seller Lotions
           </h1>
           <div className="bg-gray-100">
             <ImageSlider lifestyleProducts={lifestyleProducts} />

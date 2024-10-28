@@ -44,7 +44,7 @@ export default function CategoryPage({ initialProducts, category }) {
 
   return (
     <div className="pt-6 max-w-[789px] mx-auto">
-     <div className="breadcrumb-mockup text-[16px]">
+     <div className="px-4  breadcrumb-mockup text-[16px]">
     <div className="flex items-center space-x-2">
         <a href="/" className="flex items-center">
             <Home className="size-4 text-gray-700" />

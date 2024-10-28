@@ -79,7 +79,7 @@ export default function ProductsPage({ products, categories }) {
 
       {/* Conditional loading */}
       {loading ? (
-        <div className="flex justify-center items-center my-5">
+        <div className="flex justify-center items-center h-screen my-5">
           <Loader /> {/* Display your Loader component during loading */}
         </div>
       ) : (

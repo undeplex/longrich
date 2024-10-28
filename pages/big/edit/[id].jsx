@@ -29,10 +29,10 @@ const EditProduct = () => {
 
   useEffect(() => {
     if (id) {
-      axios.get(`/api/productSimulate/${id}`)
+      axios.get(`http://localhost:5000/products/${id}`)
         .then(response => {
           setForm({ ...response.data, image: null });
-          setImagePreview(`/uploads/${response.data.image}`);
+          setImagePreview(`http://localhost:5000/uploads/${response.data.image}`);
           fetchReviewsTest(response.data.id);
         })
         .catch(err => console.error('Failed to fetch product', err));
@@ -40,7 +40,7 @@ const EditProduct = () => {
   }, [id]);
 
   const fetchReviewsTest = (productId) => {
-    axios.get(`/api/reviews?productId=${productId}`)
+    axios.get(`http://localhost:5000/reviews?productId=${productId}`)
       .then(response => setReviewsTest(response.data))
       .catch(error => console.error('Failed to fetch reviews', error));
   };
@@ -69,7 +69,7 @@ const EditProduct = () => {
     try {
       const formData = new FormData();
       Object.keys(form).forEach(key => formData.append(key, form[key]));
-      await axios.put(`/api/productSimulate/${id}`, formData, {
+      await axios.put(`http://localhost:5000/products/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -81,7 +81,7 @@ const EditProduct = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`/api/review/${id}`)
+    axios.delete(`http://localhost:5000/review/${id}`)
       .then(() => {
         setReviewsTest(reviews.filter(review => review.id !== id));
       })

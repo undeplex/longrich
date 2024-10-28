@@ -6,12 +6,9 @@
 
 @font-face {
   font-family: ubuntu;
-  src: url(../public/inter.ttf);
+  src: url(../public/adineue\ PRO.otf);
 }
-@font-face {
-  font-family: play;
-  src: url(../public/playfair.ttf);
-}
+
 .play{
   font-family: play;
 }
@@ -22,22 +19,7 @@
 input{
   outline: none;
 }
-.pop{
-  max-width: 230px;
-  width: 289px;
-  margin: 0 auto;
-  height: 186px;
-  max-height: 230px;
-  background-image: url(../public/img/f.jpg);
-  background-size: cover;
 
-  mask-image: url(../public/mask.svg);
-  -webkit-mask-image:url(../public/mask.svg) ;
-  mask-size: cover;
-  mask-repeat: no-repeat;
-  background-repeat: no-repeat;
-  mask-position: center;
-}
 .anima{
   z-index: 100;
   animation:  anima 15s linear 12s infinite ;
@@ -45,9 +27,7 @@ input{
 .scroll-bar-hidden::-webkit-scrollbar{
   display: none;
 }
-ul,li{
-  list-style-type: disc;
-}
+
 .filter_me{
   filter: invert(55%) sepia(14%) saturate(23) hue-rotate(-45deg) brightness(119%) contrast(86%);
 }
@@ -83,15 +63,10 @@ span{
   padding: 100px 0;
   text-align: center;
 }
-
-.box {
-  width: 300px;
-  height: 150px;
-  background-color: #f7b42c;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  margin: 0 auto;
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
 }
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+

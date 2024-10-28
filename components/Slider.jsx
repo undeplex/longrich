@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import SingleStuff from "./SingleStuff";
+import SingleStuff from "./SingleProduct";
 import { ArrowLongLeftIcon, ArrowLongRightIcon } from "@heroicons/react/24/solid";
 function Responsive() {
   var settings = {

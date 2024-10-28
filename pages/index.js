@@ -1,136 +1,122 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import ImageSlider from '@/components/ImageSlider';
+import Reviews from '@/components/Review';
+import TextSlider from '@/components/TextSlider';
 import Link from 'next/link';
-import StickySlider from '@/components/StickySlider';
-import Layout from '@/components/Layout';
-import Comment from '@/components/Comment';
-import { Button } from '@/components/ui/button';
-import { AlarmCheck, AlertCircle, AlertTriangleIcon, ArrowDown, MessageCircle, Quote, TextQuote } from 'lucide-react';
-import { PlayIcon, ShoppingBagIcon, ShoppingCartIcon } from '@heroicons/react/24/solid';
-import Join from '@/components/Join';
-import Faq from '@/components/Faq';
-import Slider from '@/components/Slider';
-import SlideMe from '@/components/SlideMe';
+import ReviewCard from '@/components/ReviewCard';
+import React, { useState } from 'react';
+import fs from 'fs';
+import path from 'path';
 import HomeBanner from '@/components/HomeBanner';
-import BeforeAfter from '@/components/BeforeAfter';
-import PersonalKit from '@/components/PersonalKit';
-import SingleAfterBefore from '@/components/SingleAfterBefore';
-import BlockBest from '@/components/BlockBest';
-import TextSwitcher from '@/components/TextSwitcher';
-import WhoAreWe from '@/components/WhoAreWe';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import CategorySelect from '@/components/CategorySelect';
+import Faq from '@/components/Faq';
 import WhyChoseUs from '@/components/WhyChoseUs';
-import TextSwitcherClone from '@/components/TextSwitcherClone';
+import Join from '@/components/Join';
 
-export default function Home() {
-    const [products, setProducts] = useState([]);
-    const simpletest="I was so much amazed about how LongrichCaleb was able to deliver and walk me through my buying of Lg product , indeed i was me for all"
+export async function getServerSideProps() {
+  const filePath = path.join(process.cwd(), 'data', 'products.json');
+  const jsonData = await fs.promises.readFile(filePath, 'utf-8');
+  const products = JSON.parse(jsonData);
 
-    useEffect(() => {
-        fetchFeaturedProducts();
-    }, []);
+  const filePathReview = path.join(process.cwd(), 'data', 'reviews.json');
+  const data = JSON.parse(fs.readFileSync(filePathReview, 'utf8'));
 
-    const fetchFeaturedProducts = async () => {
-        try {//producty will be change later as we can't use no two get product stuff or whatever
-            const response = await axios.get('https://express-xzfm.onrender.com/producty?isPopular=featured');
-            setProducts(response.data);
-        } catch (err) {
-            console.error('Failed to fetch products', err);
-        }
-    };
+  // Filter for lifestyle products
+  const lifestyleProducts = products.filter((product) => product.category === 'Lotion');
 
-    return (
-        <Layout>
-            
-
-        <div className="bg-gray-100 relative  lg:max-w-5xl max-w-4xl overdl overflow-hidden  mx-auto min-h-screen">   
-       <section>
-<StickySlider/>
-        
-        <TextSwitcher/>
-        <div className=" px-2  -100 text-center flex wma  flex-col gap-1 mt-8 s justify-between ">
-        <div className="text-l text-gray-500">DELIVERING SINCE 2021</div>
-        <div className="text-2xl bol play font-bold">Longrich Store By Caleb</div>
-        <div className="text-xl ">Decouvre des produits de qualites</div>
-        <div className="text- md:w-8/12 mx-auto">
-          Votre jouney pour des produists de sante et bien-etre de worl-class quality.
-          Devenez aussi partenaire et profitez de notre engagement envers la qualite, la rapidite et la securisation 
-          des livraisons
-        </div>
-        <button  className="  my-3  mx-auto sm:w-max w-ful text-center zi -50  bg-gradient-to-bl text-black bg-emerald-500 bg-opacity-10 px-3 py-4 rounded-xl gap-2">
-          <div className="w-max mx-aut text-lg text-gray-700">
-
-                    Visiter notre shop Online
-                    <ShoppingCartIcon className="inline text-3xl w-6 ml-2"/>
-          </div>
-        </button>
-        </div>
-        <p className="play text-3xl text-center">Decouvrez Longrich pour</p>
-        <ArrowDown className="text-center mx-auto my-1 size-8 animate-bounce"/>
-        <Slider/>
-        <div className="play text-2xl mb-3 text-center">
-            Decouvrez nos produits les plus aimes
-        </div>
-        <BlockBest/>
-        
-       </section>
-            <section className="bg-emerald-00 p-2 zin z-40 sm:mb-2 mb-[35px]">
-                <p className="text-gray-500 text-lg mt-2 text-center">99% D'AVIS POSITIFS</p>
-                <p className="text-gray-500 text-lg mt-2 text-center">LIVRAISON A LUBUMBASHI</p>
-                <p className="text-gray-500 text-lg mt-2 text-center">GARANTIE DE RETOUR A 100%</p>
-            </section>
-<TextSwitcherClone/>
-<SlideMe/>
-        
-                 
-            {/* <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mx-auto lg:grid-cols-4 px-2">
-                {products.map((product) => (
-                   <div key={product.id} className="m-3 bg-gradient-to-b from-white via-white to-transparent mx-auto  rounded-xl lg:p-8 md:p-6 p-3   max-w-[290px]">
-                        <p className="px-2 py-1 text-sm bg-emerald-500 text-emerald-500 w-max my-2 bg-opacity-15 ">{product.price - 67}% off</p>
-                    <img className="lg:size-[125px] md:size-[120px] size-[100px] object-cover " src={`https://express-xzfm.onrender.com/uploads/${product.image}`} alt={product.name} width="20" />
-                    
-                    
-                        <Link href={`/freestyle1/${product.id}`}>
-                    <h2 className="font-bold text-lg mt-1 play ">
-                            {product.name} Longrich
-                        </h2>
-                        <div className="flex items-center m w-max justify-between">
-                                <p className="text-[15px]   text-gray-900">USD ${product.price}      
-                                <span className="line-through text-[14px] text-gray-700 italic ml-2">USD ${product.priceDiscount}</span>
-                                </p>
-                        </div> 
-                                          
-                  {product.category == "soins corporel" && <div className="bg-purple-500 px-4 w-max py-1 my-2 text-center text-[12px]  rounded-full bg-opacity-15 text-purple-500">{product.category}</div>}
-                  {product.category == "hygiene" && <div className="bg-blue-500 px-4 w-max py-1 my-2 text-center rounded-full text-[12px]  bg-opacity-15 text-blue-500">{product.category}</div>}
-                  {product.category == "lotion" && <div className="bg-yellow-500 px-4 w-max py-1 my-2 text-center rounded-full text-[12px]  bg-opacity-15 text-yellow-500">{product.category}</div>}
-                  {product.category == "immunite" && <div className="bg-teal-500 px-4 w-max py-1 my-2 text-center rounded-full  text-[12px] bg-opacity-15 text-teal-500">{product.category}</div>}
-                  {product.category == "nutrition" && <div className="bg-indigo-500 px-4 w-max py-1 my-2 text-center rounded-full text-[12px]  bg-opacity-15 text-indigo-500">{product.category}</div>}
-                  {product.category == "" && <div className="bg-red-500 px-4 w-max py-1 my-2 text-center rounded-full text-[12px]  bg-opacity-15 text-red-500">unavailable!</div>}
-
-                    </Link> 
-                  
-                  </div>
-                ))} 
-
-             </div> */}
-             <div className="grid col-span grid-cols-1 md:grid-cols-2  gap-3">
-
-             <WhoAreWe/>
-            <Join/>
-             </div>
-             <WhyChoseUs/>
-             <Comment/>
-            <Faq/> 
-          
-        </div> 
-        </Layout>
-    );
+  return {
+    props: { lifestyleProducts, reviews: data },
+  };
 }
 
+export default function Index({ lifestyleProducts, reviews }) {
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-   {/* <button  className="transition-all flex text-sm px-4 mx-auto  bg-emerald-700 text-white border rounded-full hover:ring  hover:ring-emerald-500 py-2 gap-1 ml-2" onClick={() => addToCart(product)}>
-                       Ajouter au panier
-                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                       <path fillRule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z" clipRule="evenodd" />
-                       </svg>
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
+  };
 
-                       </button> */}
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
+  };
+
+  return (
+    <div className="relative w-full z-30 pt-6">
+      <div>
+        <HomeBanner />
+        <h1 className="text-4xl mb-7">
+          Find products that will change your life for the better because you deserve it
+        </h1>
+        <div>
+          <h1 className="text-4xl border p-3 rounded-full w-11/12 mx-auto border-black mb-7 px-4">
+            Best Seller Lotion
+          </h1>
+          <div className="bg-gray-100">
+            <ImageSlider lifestyleProducts={lifestyleProducts} />
+          </div>
+        </div>
+        <Link href="/products">
+          <span className="text-blue-500 underline text-3xl max- ma w-max my-3 mx-auto block">The product List</span>
+        </Link>
+        
+        <TextSlider />
+
+        {/* Review Slider */}
+        <div className="bg-gray-100 px-4 py-4 mt-8">
+          <h2 className="text-3xl font-bold mb-6 mx-auto max-w-[330px] text-center">
+            Avec plus de 50 clients satisfaits de nos services, la liste s'élargit
+          </h2>
+          <p className="mx-auto max-w-[330px] text-center">
+            Incluent les commentaires sur les produits Longrich ainsi que nos distributeurs
+          </p>
+          <Link href="/">
+            <span className="underline mx-auto max-w-[330px] block  gb bg text-lg font-bold my-6 text-center">
+              VOIR PLUS DE REVUES
+            </span>
+          </Link>
+
+          <div className="relative overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 "
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {reviews.map((review, index) => (
+                <div className="flex-shrink-0 w-full" key={index}>
+                  <ReviewCard review={review} />
+                </div>
+              ))}
+            </div>
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-0 bottom-1 transform -translate-y-1/2 p-2 bg-opacity-20 backdrop-blur-2xl bg-gray-300 rounded-full shadow-lg  focus:outline-none"
+            >
+              <ArrowLeft/>
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-0 bottom-1 transform -translate-y-1/2 p-2 bg-opacity-20 backdrop-blur-2xl bg-gray-300 rounded-full shadow-lg  focus:outline-none"
+            >
+              <ArrowRight/>
+            </button>
+          </div>
+        </div>
+
+
+
+        <CategorySelect/>
+        <div className="bg-gray-100 py-5" >
+          <WhyChoseUs/>
+        </div>
+        <Join/>
+        <Faq/>
+        <div>
+          <h1 className="text-4xl play mx-auto py-5 w-max">
+            Longrich Caleb 
+          </h1>
+        </div>
+      </div>
+    </div>
+  );
+}

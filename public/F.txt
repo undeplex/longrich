@@ -1,0 +1,103 @@
+Sure! Here’s the Loader component with the CSS included directly in the JSX using inline styling and the style attribute.
+
+import React from 'react';
+
+const Loader = () => {
+  const loaderStyle = {
+    width: '48px',
+    height: '48px',
+    borderRadius: '50%',
+    position: 'relative',
+    animation: 'rotate 1s linear infinite'
+  };
+
+  const loaderBeforeStyle = {
+    content: '""',
+    boxSizing: 'border-box',
+    position: 'absolute',
+    inset: '0px',
+    borderRadius: '50%',
+    border: '5px solid #FFF',
+    animation: 'prixClipFix 2s linear infinite'
+  };
+
+  return (
+    <div style={loaderStyle}>
+      <div style={loaderBeforeStyle}></div>
+      <style jsx>{`
+        @keyframes rotate {
+          100% { transform: rotate(360deg); }
+        }
+        @keyframes prixClipFix {
+          0% { clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0); }
+          25% { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0); }
+          50% { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%); }
+          75% { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%); }
+          100% { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0); }
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default Loader;
+
+This code defines the loader animation styles within the component itself, so you can import and use this component directly without needing an external CSS file.
+
+Here's a simple React loader component based on the CSS you provided:
+
+1. Create a new file called Loader.js and add the following code:
+
+
+
+// Loader.js
+import React from 'react';
+import './Loader.css';
+
+const Loader = () => {
+  return (
+    <div className="loader"></div>
+  );
+};
+
+export default Loader;
+
+2. Create a CSS file named Loader.css in the same directory and add the provided CSS:
+
+
+
+/* Loader.css */
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite;
+}
+
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #FFF;
+  animation: prixClipFix 2s linear infinite;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes prixClipFix {
+  0% { clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0); }
+  25% { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0); }
+  50% { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%); }
+  75% { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%); }
+  100% { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0); }
+}
+
+3. Now, you
+
+
+

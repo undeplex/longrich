@@ -1,0 +1,41 @@
+
+[
+    {
+      "id": 1,
+      "name": "Laptop",
+      "category": "Electronics",
+      "price": 799.99,
+      "image": "/images/laptop.png",
+      "availability": true,
+      "description": "A powerful laptop for all your computing needs."
+    },
+    {
+      "id": 2,
+      "name": "Smartphone",
+      "category": "Electronics",
+      "price": 499.99,
+      "image": "/images/smartphone.png",
+      "availability": true,
+      "description": "Stay connected with this latest smartphone."
+    },
+    {
+      "id": 3,
+      "name": "Coffee Maker",
+      "category": "Home Appliances",
+      "price": 49.99,
+      "image": "/images/coffee_maker.png",
+      "availability": true,
+      "description": "Brew your morning coffee easily."
+    }
+    ,
+    {
+      "id":4,
+      "name": "Coffee Maker Burg",
+      "category": "Home Appliances",
+      "price": 49.99,
+      "image": "/images/coffee_maker.png",
+      "availability": true,
+      "description": "Brew your morning coffee easily."
+    }
+  ]
+  

@@ -2,7 +2,6 @@ import React from 'react'
 import { Button } from './ui/button'
 import { Mail } from 'lucide-react'
 import Link from 'next/link'
-import { ExclamationCircleIcon } from '@heroicons/react/24/solid'
 
 export default function Footer() {
   return (
@@ -11,15 +10,15 @@ export default function Footer() {
     <div className="w-full cen content-center items-center ce justify-center place-items-center place-content-center object-center justify-items-center relative zoom-in-100 bor-[0px] bg-black text-white pt-5 lg:pb-5 md:pb-5 pb-5 px-4 ">
       <div className="max-w-4xl mx-auto">
 
-        <div className="grid text-left    grid-cols-1 sm:grid-cols-2 md:grid-cols- sm:gap-7 gap-5 lg:grid-cols-3">
+        <div className="grid text-center  grid-cols-1 sm:grid-cols-2 md:grid-cols- gap-4 lg:grid-cols-3">
           <div className="st text-left">
 
                 
-                <div className="text-left   text-gray-300">+243 9905532897</div>
-                <div className="text-left   text-gray-300">Caleb@longrichstore.com</div>
-                <div className="text-left   text-gray-300">Longrichstore@info.mail </div>
-                <div className="text-left mt-2 mb-2 ">Connect with us :</div>
-                <div className="flex gap-5 sm:gap-4  w-max  ">
+                <div className="text-center text-gray-300">+243 9905532897</div>
+                <div className="text-center text-gray-300">Caleb@longrichstore.com</div>
+                <div className="text-center text-gray-300">Longrichstore@info.mail </div>
+                <div className="text-center">Connect with us :</div>
+                <div className="flex gap-5 sm:gap-4 my-3 w-max mx-auto ">
                         
                         <svg className="fill-white sm:w-5 w-5"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
                         
@@ -32,67 +31,46 @@ export default function Footer() {
                 
           </div>
           <div>
-            <ul className="text-left  ">
+            <ul className="sm:text-left">
               <li className="list-none text-gray-200 bo fon-bold">Liens Rapides</li>
               <Link href="/">
-              
-                <li className="list-none text-gray-500 my-2 text-sm">Acceuil</li>
+                <li className="list-none text-gray-500">Acceuil</li>
               </Link>
-              <Link href="/adhesion">
-              
-                <li className="list-none text-gray-500 my-2 text-sm">Adhesion</li>
+              <Link href="/products">
+                <li className="list-none text-gray-500">Catalogue</li>
               </Link>
-              <Link href="/player/contact-admin">
-              
-                <li className="list-none text-gray-500 my-2 text-sm">Contacter Nous</li>
+              <Link href="/">
+                <li className="list-none text-gray-500">Apropos de Nous</li>
               </Link>
-              <Link href="/product">
-              
-                <li className="list-none text-gray-500 my-2 text-sm">Catalogue de produit</li>
-              </Link>
-              <Link href="/admin">
-                <li className="list-none flex items-center text-sm my-2 gap-1 text-gray-500 ">
-                  
-                <ExclamationCircleIcon className="w-6 inline text-red-500"/>
-
-                  Admin</li>
-              </Link>
-              
-
+             
             </ul>
           </div>
           <div>
-            <ul className="text-left sm:border-0 border-t pt-2 w-masss">
-              <li className="list-none text-gray-200 bo mb-2 text-sm fon-bold">Mention Legale</li>
-              <li className="list-none text-gray-500 text-sm my-2">Politique de confidentialite</li>
-              <li className="list-none text-gray-500 my-2 text-sm">Condition general de vente</li>
-              <li className="list-none text-gray-500 my-2 text-sm">Politique de cookie</li>
+            <ul className="sm:text-left">
+              <li className="list-none text-gray-500 underline">Condition general de vente</li>
+              <li className="list-none text-gray-500 underline">Guarentie de retour</li>
             </ul>
           </div>
           <div></div>
 
           <div className="">
-          <div className=" text-slate-300">
-          <div className="flex items-center w-max gap-1 sm:mx-auto">
-                <img src="/longdark.png" width="160px" className=" my-3 " />
+          <div className="text-center text-slate-300">
+          <div className="flex items-center w-max gap-1 mx-auto">
+                <img src="/longdark.png" width="160px" className=" my-2 " />
                 <span className="text-white text-[12px]">store</span> By Caleb
           </div>
-          <div className=" ">
-                 <i>"Up to you to make it happens"</i> <br/>
-                  Terms and Policy references   +  parternship
-                </div>
                 </div>
                 
           </div>
        
         </div>
       </div>
-      <div className="sm:text-center text-left   text-gray-400 mt-9 ">
-      All right reserver Longrichstore 2024. 
+      <div className="text-center text-gray-400 mt-9 ">
+      All right reserved Longrichstore 2024. 
 
       </div>
-      <div className=" w-max sm:mx-auto -10 mb-14 sm:mb-9">
-        Cooked with ❤ By Odop's <i className="underline underline-offset-4">Creative</i>
+      <div className="mx-auto w-max -10 mb-14 gap-2 items-center flex sm:mb-9">
+        Cooked with ❤ By <img src="/doi.svg" className="w-[73px] invert"/> Dev
       </div>
       
     </div>

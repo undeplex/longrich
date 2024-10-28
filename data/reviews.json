@@ -1,0 +1,28 @@
+[
+    {  "productId":"3",
+      "name": "Alice Johnson",
+      "comment": "Great product! Exactly what I needed.I will definitely stop by one of your shop to get myself another of your Bamboo soap",
+      "recommend": true,
+      "stars": 5
+    },
+    {  "productId":"4",
+      "name": "Mark Smith",
+      "comment": "Good quality, but could be better.My concerns are about the librifor i bought it days ago and trying to use it sometimes it feels so painful",
+      "recommend": true,
+      "stars": 4.5
+    },
+    {  "productId":"2",
+      "name": "Jessica Lee",
+      "comment": "Not worth the price, wouldn't recommend. As it's all about honesty it gives me all the right to speak down on it",
+      "recommend": false,
+      "stars": 2
+    },
+    {
+        "productId":"1",
+      "name": "Reckon Bill",
+      "comment": "Not worth the price, wouldn't recommend for real .Though i hope they're going toward a good feeling about all that",
+      "recommend": false,
+      "stars": 2.6
+    }
+  ]
+  

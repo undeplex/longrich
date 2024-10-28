@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export default function WhyChoseUs() {
   return (
     <div  className="my-14">
@@ -34,10 +35,10 @@ export default function WhyChoseUs() {
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
             </svg>
-            Shop easily
+            Commande facile
             </p>
             <p className="mt-2">
-               No credit card required, no account required , just pass the command and we'll get in touch with you to guide you
+                Pas besoin de carte de credit pour faire une commande, proceder facilement et vous conduiront 
             </p>
            </div>
 
@@ -54,7 +55,7 @@ export default function WhyChoseUs() {
                 <p className="play text-2xl text-orange-500">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 9.75h4.875a2.625 2.625 0 0 1 0 5.25H12M8.25 9.75 10.5 7.5M8.25 9.75 10.5 12m9-7.243V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0c1.1.128 1.907 1.077 1.907 2.185Z" />
-                </svg>Return guarantee
+                </svg>Retour Guarentee
 
                 </p>
                 <p className="mt-2">

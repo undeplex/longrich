@@ -11,7 +11,7 @@ const ViewProduct = () => {
 
   useEffect(() => {
     if (id) {
-      axios.get(`https://express-xzfm.onrender.com/${id}`)
+      axios.get(`http://localhost:5000/products/${id}`)
         .then(response => setProduct(response.data))
         .catch(err => console.error('Failed to fetch product', err));
     }
@@ -34,7 +34,7 @@ const ViewProduct = () => {
       </Link>
 
       <h1 className="play text-2xl my-3">{product.name}</h1>
-      <img src={`https://express-xzfm.onrender.com/uploads/${product.image}`} alt={product.name} width="240" className="mx-auto" />
+      <img src={`http://localhost:5000/uploads/${product.image}`} alt={product.name} width="240" className="mx-auto" />
       </div>
      
 

@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { useState, useEffect } from 'react';
+import { ChevronDown, Home, LucideRocket } from 'lucide-react';
 import ReactPaginate from 'react-paginate';
 import ProductList from '../../components/ProductList';
 import Header from '@/components/Header';
@@ -75,7 +76,7 @@ export default function CategoryPage({ initialProducts, category }) {
         containerClassName="flex justify-center mt-6 space-x-2"
         pageClassName="p-2 bg-gray-200 rounded-lg"
         activeClassName="bg-blue-500 text-white"
-        previousClassName="p-2 bg-gray-200 rounded-lg"
+        previousClassName="p-2 v bg-gray-200 rounded-lg"
         nextClassName="p-2 bg-gray-200 rounded-lg"
         disabledClassName="text-gray-400"
       />

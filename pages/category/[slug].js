@@ -42,18 +42,26 @@ export default function CategoryPage({ initialProducts, category }) {
   };
 
   return (
-    <div className=" max-w-[789px] mx-auto">
-        <div className="flex mb-3">
-            <Link href="/">
-                <span>Home</span>/
-            </Link>
-            <Link href="/products">
-                <span>produits</span>/
-            </Link>
-        <p className="">
-        {category.charAt(0).toUpperCase() + category.slice(1)}     </p>
-            {/* <span>{product.category}</span>/ */}
-        </div>
+    <div className="pt-6 max-w-[789px] mx-auto">
+     <div className="breadcrumb-mockup text-[16px]">
+    <div className="flex items-center space-x-2">
+        <a href="/" className="flex items-center">
+            <Home className="size-4 text-gray-700" />
+        </a>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5L15.75 12l-7.5 7.5" />
+        </svg>
+        <a href="/products">Catalogue</a>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5L15.75 12l-7.5 7.5" />
+        </svg>
+        <a href={`/category/${product.category.toLowerCase()}`} className="capitalize">{product?.category}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5L15.75 12l-7.5 7.5" />
+        </svg>
+        <span>{product.name}</span>
+    </div>
+</div>
       <h1 className="text-3xl font-bold text-center mb-6">
         Products in "{category.charAt(0).toUpperCase() + category.slice(1)}"
       </h1>

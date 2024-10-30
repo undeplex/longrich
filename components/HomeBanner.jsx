@@ -15,7 +15,7 @@ export default function HomeBanner() {
       </p>
       <Link href="/products">
       
-      <button className="text-xl bg-emerald-500 bg-opacity-15 underline underline-offset-1 mx-auto block my-5 text-emerald-500">VISITER NOTRE SHOP</button>
+      <button className="text-xl bg-emerald-500 bg-opacity-15 px-4 py-3 rounded-full underline-offset-1 mx-auto block my-5 text-emerald-500">VISITER NOTRE SHOP</button>
       </Link>
     </div>
   )

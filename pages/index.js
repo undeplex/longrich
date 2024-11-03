@@ -83,6 +83,8 @@ export default function Index({ lifestyleProducts, reviews, lotionProducts, dive
         <meta property="og:image" content="/longrich.jpg" /> {/* Change to a valid image URL */}
         <meta property="og:url" content="https://www.longrich.vercel.app" /> {/* Replace with your actual URL */}
         <link rel="canonical" href="https://www.longrich.vercel.app" /> {/* Replace with your actual URL */}
+
+<meta name="google-site-verification" content="X9VNHlSHe3gZgLhbrxy1m63nEUuU996fT93Kedbafw0" />
       </Head>
       
       <div>

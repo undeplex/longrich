@@ -287,7 +287,7 @@ export default function ProductPage({ product, relatedProducts }) {
           </div>
             <h2 className="text-xl my- font-semibold bg-purpl  h-[70px] mb-3 w-11/12 mt-">{product.name} </h2>
 
-            <p className="text-gray-600 text-  h-[px] g-red-400 w-full brea truncatebreak-normal">{product.smallDescription}</p>
+           
             <p className="text-gray-600 underline">Q.{product.quantite}</p>
           {product.availability ? <span className="text-green-500">Disponible en stock</span>  :<span className="text-red-500">Pas Disponible en stock</span> }
           </Link>

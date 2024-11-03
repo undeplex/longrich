@@ -83,9 +83,9 @@ export default function ProductList({ products }) {
           </div>
             <h2 className=" my-2 font-semibold bg-purpl  h-[65px] w-11/12 mt-">{product.name} </h2>
 
-            <p className="text-gray-600 text-  h-[72px] g-red-400 w-full break-all">{product.smallDescription}</p>
-            <p className="text-gray-800 underline">Q.{product.quantite}</p>
-          {product.availability ? <span className="text-green-500">Disponible en stock</span>  :<span className="text-red-500">X stock Disponible</span> }
+            <p className="text-gray-600 text-sm  h-[72px] g-red-400 w-full break-all">{product.smallDescription}</p>
+            <p className="text-gray-800 underline text-sm">Q.{product.quantite}</p>
+          {product.availability ? <span className="text-green-500 text-sm">Disponible en stock</span>  :<span className="text-red-500 text-sm">No stock Disponible</span> }
           </Link>
             <div className="flex my-3 gap-5 items-center justify-between">
         <span className="text-2xl">${product.price}</span>

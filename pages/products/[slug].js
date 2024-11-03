@@ -4,19 +4,13 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useAtom } from 'jotai';
 import { cartAtom } from '../../atoms/cartAtom';
-import Header from '@/components/Header';
-// SwiperCore.use([Navigation, Pagination]);
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import SwiperCore, { Navigation, Pagination } from 'swiper/modules';
-import { HomeIcon } from '@heroicons/react/24/outline';
-import { ChevronDown, Home, LucideRocket } from 'lucide-react';
+import { ChevronDown, Home, LucideRocket, RocketIcon, ShoppingCart } from 'lucide-react';
 import Loader from '@/components/Loader';
 import LoaderWhite from '@/components/LoaderWhite';
 import Perks from '@/components/Perks';
+import ProductList from '@/components/ProductList';
+import { FireIcon } from '@heroicons/react/24/solid';
 
 
 export async function getServerSideProps(context) {
@@ -59,14 +53,18 @@ export default function ProductPage({ product, relatedProducts }) {
       }
 
       setTimeout(() => setPopup(false), 2000); // Popup disappears after 2 seconds
-    }, 3000); // Simulate loading delay
+    }, 1500); // Simulate loading delay
   };
   return (
-    <div className="p-6 max-w-[789px] mx-auto">
-      <div className=" flex  lg:flex-row md:flex-row flex-col lg:gap-16  md:gap-10">
-           <div className="bg-red-00">
+    <div className="py-6 px-3 max-w-5xl  mx-auto">
+      <div className="mx-auto w-max">
+      {popup && <p className="text-green-500 my-3">{product.name} a été ajouter dans le panier avec success</p>}
 
-                <div className="breadcrumb-mockup text-[16px] ">
+      </div>
+      <div className=" flex pt-[64px] lg:flex-row md:flex-row flex-col lg:gap-16  md:gap-7">
+           <div className=" md:w-5/12">
+
+                <div className="breadcrumb-mockup text-[16px] bg w-max">
                 <div className="flex items-center  ">
                     <a href="/">
                     <Home className="size-4 text-gray-700"/>
@@ -87,40 +85,41 @@ export default function ProductPage({ product, relatedProducts }) {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                         </svg>
-                    </div><span>{product.name}</span>
+                    </div><span className="truncate m max-w-[160px] sm:max-w-[500px]">{product.name}</span>
                     
                 </div>
 
                  </div>
-                 <img src={product.image} alt={product.name} className="mx-auto lg:w-[395px] block  md:w-[470px] w-full py-3 rounded-xl " width="400"/>
+                 <img src={product.image} alt={product.name} className="mx-auto lg:w-[285px] block  md:w-[270px] w-8/12 py-3 rounded-xl " width="200"/>
 
 </div>
 
-   <div className=" lg:w-9/12 md:w-10/12 lg:pt-10 md:pt-9">
-        <p>APLEX</p>
-    <h2 className="font-bold ply lg:text-3xl  text-3xl justify-between flex gap-2 items-center"> {product.name} Longrich 100ml </h2>                           
+   <div className=" lg:w-9/12 md:w-/12  lg:pt-10 md:pt-9">
+
+        <p>LONGRICH STOCK l'shi</p>
+    <h2 className="font-bold ply lg:text-3xl  text-3xl justify-between flex gap-2 items-center"> {product.name} </h2>                           
                 <div className="flex gap-1 my-1 items-center  play">
                     <span className="play font-bold text-lg text-0 -yellosm:w-7 w-70">4.3 </span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5 text-yellow-500 sm:w-7 w-70">
                             <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clipRule="evenodd" />
                             </svg>
                            
-                <span className="text-sm">(89 Avis )</span>
+                <p className="text-sm">(89 Avis )</p>
                 </div>
                <div className="text-gray-500  my-4 ">
                {/* <p dangerouslySetInnerHTML={{ __html: product?.description }}></p>  */}
                 </div> 
           
           <div className="flex gap-2 items-center mt-4 mb-2">
-                                <p className="text-lg   ">USD ${product.price}</p>
+                                <p className="text-2xl font-bold   ">USD ${product.price}</p>
           </div> 
-                                <p className="text-lg  text-gray-600 my-3">{product.description}</p>
-          <div className="flex gap-2 et text-sm">
+                                <p className="text-lg  text-gray-600 my-3">{product.smallDescription}</p>
+                                <p className="">Contenu net: {product.quantite}</p>
 
-            <p>Tax inclus</p>
-            <div>
-                <span className="size-3 inline-block  mr-1 rounded-full bg-green-500"></span>
-                +50 Produits disponible en Stock</div>
+                                <p className="mt-2">
+                                {product.availability ? <span className="text-green-500">Disponible en stock</span>  :<span className="text-red-500">Pas Disponible en stock</span> }</p>
+
+          <div className="flex gap-2 et text-sm">          
           </div>
 
           <div className="sm:flex md:flex-col lg:flex-row sm:flex-col  sm:items-start sm:text-sm hidde sm:max-w mt-4  gap-6 lg:flex md:flex  items-center ">
@@ -131,15 +130,14 @@ export default function ProductPage({ product, relatedProducts }) {
       >
         {loading ?<div className="mx-auto  w-max"> <LoaderWhite/> </div>: 'Add to Cart'}
       </button>
-      {popup && <p className="text-green-500 mt-2">{product.name} added to cart</p>}
 
               <div className="flex my-2 gap-2 text-sm items-center"><LucideRocket className="text-gray-600 inline mt-2 w-1/12" />
               <div className=" w-11/12">
 
-              <p className="font-bold">Swift at delivering as sane promise !</p> 
+              <p className="font-bold">Livraison A Lubumbashi & Kolwezi Possible !</p> 
               <p>
 
-              Nous vous livrons vos produits commander le plus vite que possible
+              Nous livrons vos produits commander le plus vite 
               </p>
               </div>
               </div>
@@ -148,33 +146,47 @@ export default function ProductPage({ product, relatedProducts }) {
  
 </div>
         
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-l mx-auto">
+      <div className="tag-section">
+  <h2 className="text-emerald-600 font-bold mb-4">Tags</h2>
+  <div className="flex flex-wrap gap-3">
+    {product.tags.map((tag, index) => (
+        <Link key={index} href={`/tags/${tag}`}>
+          <span className="m-2 px-4 py-1 bg  border rounded-full">
+            {tag}
+          </span>
+        </Link>
+      ))}
+  </div>
+</div>
 
-        <p className="mt-2">{product.availability ? 'In Stock' : 'Out of Stock'}</p>
 
 <div>
   <h1 className="text-gray-500 text-xl flex gap-3 my-2 justify-between mt-5">DETAIL <ChevronDown/></h1>
     <p className="mb-4">
-        Voici un exemple plus detailler de ce produit appelé {product.name} du category {product.category},
-        et c'est une de meilleur de description qu'on peut vous donner concernant ce produit, une fois que 
-        nous aura fini la lecture de cette petite description, nous allons vous donner les ingrédients et l'utilisation de ce produit    
+      {product.description}
     </p>
 </div>
 <div>
   <h1 className="text-gray-500 text-xl flex gap-3 my-2 justify-between">UTILISATION <ChevronDown/></h1>
     <p className="mb-7">
-        Voici un exemple qui parle de l'utilisation de ce produit appelé {product.name} du category {product.category},
-        et c'est une de meilleur de facon de voir l'usage d'un produit , une fois que 
-        nous aura fini la lecture de cette petite description, nous allons vous donner les ingrédients et l'utilisation de ce produit    
+      {product.usage}
+    </p>
+</div>
+<div>
+  <h1 className="text-gray-500 text-xl flex gap-3 my-2 justify-between">FONCTIONS <ChevronDown/></h1>
+    <p className="mb-7">
+      {product.fonction}
     </p>
 </div>
 <div>
   <h1 className="text-gray-500 text-xl flex gap-3 my-2 justify-between">INGREDIENTS <ChevronDown/></h1>
     <ul className="mb-7 list-inside px-3">
-      <li className="list-disc">Sodium 500ml</li>
-      <li className="list-disc">Ryther 4%</li>
-      <li className="list-disc">Giseng rouge 9ml</li>
-      <li className="list-disc">Colorant 0.32mg</li>
+    {product.ingredient.map((ingredient, index) => (
+      <li key={index} className="mb-1 list-disc">
+        {ingredient}
+      </li>
+    ))}
     </ul>
 </div>
         <div className="text-center">Connect with us :</div>
@@ -190,21 +202,57 @@ export default function ProductPage({ product, relatedProducts }) {
 
 <Perks/>
 
-        <h2 className="text-xl font-semibold mt-8">Les produits si bas pourraient vous interessez</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
-          {relatedProducts.map((relatedProduct) => (
-            <div key={relatedProduct.id} className="p-2">
-              <Link href={`/products/${encodeURIComponent(relatedProduct.name)}`}>
-              
-                  <img src={relatedProduct.image} alt={relatedProduct.name} className="w-full h-32 object-cover rounded-2xl" />
-                  <h3 className="text-lg mt-2">{relatedProduct.name}</h3>
-                  <p className="text-gray-600">${relatedProduct.price}</p>
-             
-              </Link>
-            </div>
-          ))}
-        </div>
+        <h2 className="text-2xl my-3 font-semibold mt-8">Les produits si dessous pourraient aussi vous interessez</h2>
+        <div className="grid grid-cols-1  bg- md:grid-cols-3 gap-4  px- ">
+      {relatedProducts.map((product) => (
+        <div key={relatedProducts.id} className=" px- red-200 max-w-[340px] my-3 bg mx-auto rounded bg-gray-0">
+          <Link href={`/products/${encodeURIComponent(product.name || 'undefined-product')}`}>
+            {product.featured && <>
+              <div className="text-white w-max bg-emerald-500 -rotate-[23deg] g-opacity-15 px-3 py-2 text-sm">
+              Populaire  <FireIcon className="inline size-4"/>
+              </div>
+            
+            </>}
+            {!product.featured && <>
+              <div className="text-white w-max bg-orange-500 -rotate-[23deg] g-opacity-15 px-3 py-2 text-sm">
+              Tendence <RocketIcon className="inline size-4"/>
+              </div>
+            
+            </>}
+         
+          <div className="px-9 bg-gray grid place-content-center h-[122px] mb-4">
+
+            <img src={product.image} alt={product.name} className="rounded-xl h-full w-[160px] object-cover" />
+          </div>
+            <h2 className="text-xl my- font-semibold bg-purpl  h-[70px] mb-3 w-11/12 mt-">{product.name} </h2>
+
+            <p className="text-gray-600 text-  h-[px] g-red-400 w-full brea truncatebreak-normal">{product.smallDescription}</p>
+            <p className="text-gray-600 underline">Q.{product.quantite}</p>
+          {product.availability ? <span className="text-green-500">Disponible en stock</span>  :<span className="text-red-500">Pas Disponible en stock</span> }
+          </Link>
+            <div className="flex my-3 gap-5 items-center justify-between">
+        <span className="text-2xl">${product.price}</span>
+        <button 
+        onClick={() => addToCart(product)}
+        className="bg-gray-100 p-3 block relative  rounded-full">
+          <span className=" absolute top-0 -right-2 size-5 rounded-full grid bg-white text-gray-600 shadow-2xl place-content-center">+</span>
+        {loading ? <Loader/> : <ShoppingCart className="size-5 text-slate-700"/>}
+        
+
+      </button>
       </div>
+        <span className="underline">{product.category.toUpperCase()}</span>
+      {popup && <p className="text-green-500 mt-2">{product.name} added to cart</p>}
+          {/* <button
+            onClick={() => handleAddToCart(product)}
+            className="mt-2 p-2 bg-blue-500 text-white rounded-md"
+          >
+            Add to Cart
+          </button> */}
+        </div>
+      ))}
+    </div>
+        </div>
       
     </div>
   );

@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { useState, useEffect } from 'react';
-import { ChevronDown, Home, LucideRocket } from 'lucide-react';
 import ReactPaginate from 'react-paginate';
 import ProductList from '../../components/ProductList';
 import Header from '@/components/Header';
 import Link from 'next/link';
+import Home, { HomeIcon } from 'lucide-react'
 
 export async function getServerSideProps({ params }) {
   const filePath = path.join(process.cwd(), 'data', 'products.json');
@@ -41,44 +41,61 @@ export default function CategoryPage({ initialProducts, category }) {
     const newOffset = (event.selected * itemsPerPage) % initialProducts.length;
     setItemOffset(newOffset);
   };
+  const handlePageChange = ({ selected }) => {
+    setCurrentPage(selected);
+  };
 
   return (
-    <div className="pt-6 max-w-[789px] mx-auto">
-     <div className="px-4  breadcrumb-mockup text-[16px]">
-    <div className="flex items-center space-x-2">
-        <a href="/" className="flex items-center">
-            <Home className="size-4 text-gray-700" />
-        </a>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5L15.75 12l-7.5 7.5" />
-        </svg>
-        <a href="/products">Catalogue</a>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5L15.75 12l-7.5 7.5" />
-        </svg>
-        <span>
-{category.charAt(0).toUpperCase() + category.slice(1)}
-</span>
-        
-    </div>
-</div>
-      <h1 className="text-3xl font-bold text-center mb-6">
+    <div className="py-8 max-w-5xl mx-auto">
+        <div className="flex mb-3">
+        <div className="breadcrumb-mockup px-3 text-[16px] bg w-max">
+                <div className="flex items-center  ">
+                    <a href="/">
+                    
+                    <HomeIcon className="size-4 text-gray-700"/>
+                    </a>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </div>
+                    <a href="/products">catalogue</a>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </div>
+                    <a href="/products">categorie</a>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </div>
+                    <p className="wma min-w-1w-max truncate flex  h-6 overflow-hidden">
+                    {category.charAt(0).toUpperCase() + category.slice(1)}     </p>               
+                   
+                    
+                </div>
+
+                 </div>
+    
+            {/* <span>{product.category}</span>/ */}
+        </div>
+      <h1 className="text-xl font-bold text-center mb-6">
         Products in "{category.charAt(0).toUpperCase() + category.slice(1)}"
       </h1>
       <ProductList products={currentItems} />
       <ReactPaginate
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        marginPagesDisplayed={2}
+        previousLabel={"Previous"}
+        nextLabel={"Next"}
         pageCount={pageCount}
-        previousLabel="Previous"
-        nextLabel="Next"
-        containerClassName="flex justify-center mt-6 space-x-2"
-        pageClassName="p-2 bg-gray-200 rounded-lg"
-        activeClassName="bg-blue-500 text-white"
-        previousClassName="p-2 bg-gray-200 rounded-lg"
-        nextClassName="p-2 bg-gray-200 rounded-lg"
-        disabledClassName="text-gray-400"
+        onPageChange={handlePageChange}
+        containerClassName="flex justify-center items-center mt-8"
+        pageClassName="mx-1"
+        pageLinkClassName="px-4 py-2 border rounded-md hover:bg-gray-100"
+        previousLinkClassName="px-4 py-2 border rounded-md mr-2"
+        nextLinkClassName="px-4 py-2 border rounded-md ml-2"
+        activeLinkClassName="bg-blue-500 text-white"
       />
     </div>
   );

@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <>
     
-    <div className="w-full cen content-center items-center ce justify-center place-items-center place-content-center object-center justify-items-center relative zoom-in-100 bor-[0px] bg-black text-white pt-5 lg:pb-5 md:pb-5 pb-5 px-4 ">
+    <div className="w-full cen content-center items-center ce justify-center place-items-center place-content-center object-center justify-items-center relative zoom-in-100 bor-[0px] bg-slate-950 text-white pt-5 lg:pb-3 md:pb-5 pb-5 px-4 ">
       <div className="max-w-4xl mx-auto">
 
         <div className="grid text-center  grid-cols-1 sm:grid-cols-2 md:grid-cols- gap-4 lg:grid-cols-3">
@@ -69,8 +69,8 @@ export default function Footer() {
       All right reserved Longrichstore 2024. 
 
       </div>
-      <div className="mx-auto w-max -10 mb-14 gap-2 items-center flex sm:mb-9">
-        Cooked with ❤ By <img src="/doi.svg" className="w-[73px] invert"/> Dev
+      <div className="mx-auto w-max -10 mt-2 mb-6 gap-2 items-center flex sm:mb-9">
+        Cooked with ❤ By <img src="/doic.svg" className="w-[73px] invert"/> Dev
       </div>
       
     </div>

@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
 const TextSlider = () => {
-  const texts = ["Welcome to Longrich Store", "Discover Great Products", "Enjoy Amazing Deals","All Client support 24/7"];
+  const texts = ["Obtenez des reductions", "Commander facilement", "S'informer des produits","Gagner facilement"];
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const textRef = useRef(null);
 
@@ -32,8 +32,8 @@ const TextSlider = () => {
   }, []);
 
   return (
-    <div className="text-center text-3xl mx-auto  w-[260px]">
-      <span ref={textRef}>{texts[currentTextIndex]}</span>
+    <div className="text-center text-slate-700 h-[85px] mb-8 text-4xl font-bold mx-auto  max-w-[460px]">
+      Chez LongrichStore <span ref={textRef}>{texts[currentTextIndex]}</span>
     </div>
   );
 };

@@ -2,7 +2,7 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
 import Link from 'next/link';
-import { ShoppingBag } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 import { useAtom } from 'jotai';
 import { cartAtom } from '../atoms/cartAtom';
@@ -34,16 +34,15 @@ const SingleProduct = ({ product }) => {
     }, 3000); // Simulate loading delay
   };
   return (
-    <div className="shrink-0 min-h-[400px] lg:w-[229px] w-[250px] bg-white p-3 h-max hide-scrollbar rounded-xl overflow-hidden">
+    <div className="shrink-0 max-h-[500px] lg:w-[279px] w-[253px] bg-white p-4 h-max hide-scrollbar rounded-xl overflow-hidden">
 <Link href={`/products/${encodeURIComponent(product.name || 'undefined-product')}`}>
 
-      <img
-        src={product.image}
-        alt={product.name}
-        className="w-full h-[170px] bg-red-100 rounded-xl object-cover"
-      />
-      <h1 className="text-xl mt-5 font-bold">{product.name.toUpperCase()}</h1>
-      <h1 className="text-lg mt-1 font-bold">{product.category}</h1>
+<div className="px-9 bg-gray grid place-content-center h-[122px] mb-4">
+
+<img src={product.image} alt={product.name} className="rounded-xl h-full w-[190px] object-cover" />
+</div>
+      <h1 className="text-xl mt-5 font-bold">{product.name}</h1>
+      <h1 className="text- mt-1 font-bold">{product.category}</h1>
 </Link>
 
       
@@ -52,16 +51,17 @@ const SingleProduct = ({ product }) => {
         <span className="underline">Best for all</span>
         <button 
         onClick={() => addToCart(product)}
-        className="bg-gray-100 p-3 rounded-full">
-        {loading ? <Loader/> : <ShoppingBagIcon className="size-5"/>}
+        className="bg-gray-100 p-3 block relative  rounded-full">
+          <span className=" absolute top-0 -right-2 size-5 rounded-full grid bg-white text-gray-600 shadow-2xl place-content-center">+</span>
+        {loading ? <Loader/> : <ShoppingCart className="size-5 text-slate-700"/>}
 
       </button>
       </div>
       {popup && <p className="text-green-500 mt-2">{product.name} added to cart</p>}
 
-      <p className="text-gray-600">{product.description}</p>
-      <p className="flex mt-2">
-        <FaStar className="text-black" /> <span>5 stars, 100% Recommend</span>
+      <p className="text-gray-600">{product.smallDescription}</p>
+      <p className="flex items-center gap-1 mt-2">
+        <FaStar className="text-gray-800"/> <span>5 stars, 100% Recommend</span>
       </p>
     </div>
   );

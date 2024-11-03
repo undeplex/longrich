@@ -4,19 +4,16 @@
 
 
 
-
-
-
 @font-face {
-  font-family: openz;
-  src: url(../public/OpenSans-VariableFont_wdth,wght.ttf);
+  font-family: ubuntu;
+  src: url(../public/ubuntu.ttf);
 }
 
 .play{
   font-family: play;
 }
 *{
-  font-family:openz,sans-serif;
+  font-family: ubuntu;
   outline:none
 }
 input{
@@ -73,3 +70,36 @@ span{
   display: none; /* Chrome, Safari */
 }
 
+.slick-prev, .slick-next {
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  color: #4ade80; /* Emerald color */
+}
+.slick-prev:before, .slick-next:before {
+  font-size: 30px;
+}
+.slick-prev {
+  left: -10px;
+}
+.slick-next {
+  right: -10px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #ddd;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #4ade80; /* Emerald color */
+}
+
+@media (max-width: 728px) {
+  .swiper-button-next,.swiper-button-prev{
+    display: none;
+    visibility: hidden;
+   
+  }
+  
+}

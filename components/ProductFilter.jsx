@@ -148,7 +148,7 @@ export default function ProductFilter({ categories, onFilter, onSort }) {
           placeholder="Search products"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="p-2 border rounded-lg w-full md:w-1/3"
+          className="p-2 border rounded-lg  max-w-[345px] block :w-1/3"
         />
         <button
           onClick={handleSearch}
@@ -179,8 +179,17 @@ export default function ProductFilter({ categories, onFilter, onSort }) {
          <div className="absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-white pointer-events-none"></div>
            <div className="absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-white pointer-events-none"></div>    
             <div className="flex overflow-x-auto hide-scrollbar space-x-2" style={{ scrollSnapType: 'x mandatory' }}>
+            <button   
+            onClick={() => handleCategoryClick(categories == "")}
+            className={`h-9  px-3 rounded-full w block ${
+              selectedCategory === categories
+                ? 'bg-blue-500 bg-opacity-15 text-blue-500 rounded-full   '
+                : 'bg-gray-200 rounded-full  '
+            } hover:bg-blue-400 hover:text-white`}
+            >Tous </button>
                  {categories.map((category) => (
             // <Link key={category} href={`/category/${category.toLowerCase()}`}>
+   
               <button   key={category}
             onClick={() => handleCategoryClick(category)}
             className={`h-9  px-3 rounded-full w block ${
@@ -198,18 +207,18 @@ export default function ProductFilter({ categories, onFilter, onSort }) {
             // </Link>
           ))}
         </div>
-      </div>
+</div>
 
       {/* Sort Button and Pop-up */}
-      <div className="relative flex justify-end px-3">
+      <div className="relative hidden flex justify-end px-3">
         <button
           onClick={() => setIsSortOpen(!isSortOpen)}
-          className="p-2 bg-gray-200 rounded-lg hover:bg-gray-300"
+          className="p-2 bg-gray-200 text-gray-600 bg-opacity-30 flex items-center rounded-lg hover:bg-gray-300 hover:bg-opacity-15"
         >
-          Sort <Filter />
+          Sort <Filter className="size-4 inline " />
         </button>
         {isSortOpen && (
-          <div className="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
+          <div className="absolute top-0 right-16 mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
             <button
               onClick={() => handleSortChange('a-z')}
               className="block w-full text-left p-2 hover:bg-gray-100"

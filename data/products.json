@@ -2,510 +2,262 @@
 [
     {
       "id": 1,
-      "name": "Bright Kross",
-      "category": "Lotion",
-      "price": 799.99,
-      "image": "/img/29.jpg",
+      "name": "Dentifrice Longrich au thé blanc",
+      "quantite":"200g",
+      "smallDescription":"dentifrice Arome à la menthe, multiple action",
+      "category": "Produit de sante",
+      "subCategory": "bouche",
+      "ingredient": ["Thé blanc",
+      "xylitol"," aloès Vera","benzoate de sodium","CaGP (glycérophosphate de calcium)"
+    ],
+      "usage": "Orales, et dermiques (adultes et enfants pas avant 1 ans .brossage 2-3 fois/jour, 1-3 minutes brossage si souffrance d’ulcères buccal, Laissez le dentifrice après le brossage 2-3 minutes dans la bouche avant rinçage",
+      "tags":[
+        "carie","haleine fraiche"
+      ],
+      "price": 79.99,
+      "priceDiscount": 69.99,
+      "image": "/LongrichAsset/Dentifrice-Longrich-au-the-blanc.webp",
       "availability": true,
-      "description": "A powerful laptop for all your computing needs.",
+      "description": " Grâce à son niveau élevé d’antioxydant, le thé blanc sera mieux préparé à combattre et neutraliser les radicaux libres. Joue un rôle de prévention sur l'apparition des caries, les tartres et plaque dentaire, il va tuer également les bactéries qui sont à l'origine de la mauvaise haleine et la fragilité des gencives. Il contient de petites quantités d'autres nutriments qui vont maintenir vos dents saines ,Xylitol : avec un indice glycémique très faible, il aide à combattre les otites chez les jeunes enfants et réduit les risques de caries (et celles déjà formées) freinant la prolifération des bactéries notamment le Streptococcus mutants, la bactérie responsable de la formation des caries. Il rafraichit également l'haleine,aloès verra : stimule la cicatrisation et a également une activité anti-inflammatoire Benzoate de sodium : contient une forte teneur en agents antifongique CaGP (glycérophosphate de calcium) Protéger les dents et la santé des tissus parodontau ",
       "images": [
-       
-        
-      ]
+      ],
+      "fonction":"",
+      "featured":true
     },
     {
       "id": 2,
-      "name": "Limea",
-      "category": "Lotion",
-      "price": 499.99,
-      "image": "/img/31.jpg",
+      "name": "Longrich Spray Buccal",
+      "quantite":"15g",
+      "smallDescription":"Rendre fraiche votre haile fraiche arome a la menthe",
+      "category": "Produit de sante",
+      "subCategory": "bouche",
+      "ingredient": ["Thé blanc"," huile de menthe poivrée"," PEG-40 Huile de ricin hydrogénée"
+    ],
+      "usage": "Orales et dermiques (adultes et enfants pas avant 5ans),ulvériser sur zone affecté directement, 1-2 pulvérisation dans la bouche 2-4 fois par jour au besoin peut-être avaler. ",
+      "tags":[
+        "haleine fraiche","carie","peau","menthe"
+      ],
+      "price": 79.99,
+      "priceDiscount": 69.99,
+      "image": "/LongrichAsset/Spray-Buccal.webp",
       "availability": true,
-      "description": "Stay connected with this latest smartphone.",
+      "description": "aide à éradiquer la mauvaise haleine avant ou après manger, fumer ou boire il est efficace dans le traitement de la toux chez les enfants, permettant aux poumons de se détendre et il est un bon émulsifiant.Il a un effet de refroidissement et il est utilisé dans traitement dela cellulite.Il stimule une sensation de fraicheur dans la bouche et au corps, il a des propriétés anti oxydantes et anti-cancérigènes car contient du thé blanc et la menthe utilisé avec de l'eau chaude pour soulager les symptômes du rhume grâce à la libérationde vapeur,il aide à traiter les maux de gorge ou congestion nasale aide à ramollir les aliments callé entre les dents pour faciliter leursextractions ",
       "images": [
-       
-       
-      ]
+      ],
+      "fonction":"Protège les gencives, traite et protège les muqueuses buccales, antibactérien,cavité buccal et inflammation, haleine fraîche, Mauvaise haleine, état grippale, ",
+      "featured":false
     },
     {
       "id": 3,
-      "name": "Fraight",
-      "category": "Diver",
-      "price": 49.99,
-      "image": "/img/32.jpg",
+      "name": "Eau de toilette floral Anti moustique",
+      "quantite":"195 ml",
+      "smallDescription":"Anti moustique et anti demangeason efficace",
+      "category":"Soins du corps",
+      "subCategory":"",
+      "ingredient": ["Eau",
+      "Alcool","diéthyl-3-méthylbenzamide (DEET) ","huile essentiel de fleurs"
+    ],
+      "usage": "Dermiques (adultes et enfants pas avant 1ans,ulvériser sur zone affecté directement,Ne pas avaler, ne pas pulvériser à l'œil ou de la bouche, garder loin des enfants.Utiliser avec prudence chez les patients asthmatique et les femmes enceintes. Ne pas appliquer sur des blessures. Diluer si allergie à l’alcoo ",
+      "tags":[
+        "odeur corporel"
+      ],
+      "price": 79.99,
+      "priceDiscount": 69.99,
+      "image": "/LongrichAsset/tryLong.png",
       "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
+      "description": "Est un insectifuge et non insecticide, -Contient du DEET, comme ingrédient actif, il protège contre les moustiques et tous insectes piqueurs ou mordeurs, soulage les piqures d’insectes et ne provoque pas d'irritation de lapeau -jusqu'à 8 heures de protection contre toute piqure de moustique ou insectes volants grâce àsa concentration de DEET de 5% et autre ingrédients nonagressifbonne fragrance floral et fruiter ainsi peut être utilisé commeparfum corporelle-Pulvériser sur la partie externe du corps en évitant lesblessures-sans danger pour la peau aucun effet cancéreux, ni nocif pourla peau-Il ne provoque pasl'oxydation-son odeur perturbe les fonctions des récepteurs spéciaux des antennesde moustiques-Une fois qu'il pénètre dans le corps humain, il est éliminé par les urine",
+      "images": [
+      ],
+      "fonction":"anti - moustique, anti - démangeaison, odeur corpore",
+      "featured":false
+    },
     {
       "id": 4,
-      "name": "Timero",
-      "category": "Lifestyle",
-      "price": 49.99,
-      "image": "/img/30.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
+      "name": "Longrich déodorant Anti transpirant roll-on",
+      "quantite":"50 ml",
+      "smallDescription":"La transpiration stopper en un coup",
+      "category": "Soins du corps",
+      "subCategory": "Lotion",
+      "ingredient": ["Eau","Alcool",", allantoïnes","poudre de jus de feuilles d'aloe"
+    ],
+      "usage": "Dermiques, tous type de peau adultes et enfants pas avant 5 ans.pplication aux aisselles utilisées Prudemment sur les blessures ou la peau sensible.",
+      "tags":[
+        "acne"
+      ],
+      "price": 79.99,
+      "priceDiscount": 69.99,
+      "image": "/LongrichAsset/Deodorant-anti-transpirant.png",
+      "availability": false,
+      "description": "Allantoïnes : Reconnue pour ses propriétés hydratantes, anti-irritantes et son action trophique cellulaire (bénéfique sur la croissance des cellules), elle est efficace même à faible concentration (à partir de 0,1%). Elle a un très bon profil toxicologique (agent non toxique, non irritant), compatible avec la plupart des ingrédients des formulations et avec les matériaux de conditionnement.Elle est utilisée dans le traitement des plaies, brûlures et ulcères cutanés. Elle aide à la régénération des tissus lésés (granulation) et agit comme accélérateur decicatrisation. Fait à base d’ingrédients semi naturel non toxique un parfum doux, discret et agréable pour homme, femme et enfants Nitrite pas la peau et adapté à tous types de peau Sèche rapidement, ne collant pas et antitaches idéal sur vêtements decouleur.Élimine les odeurs et vous permet de rester frais, en vous faisant sentir agréable etconfiant toute la journée ,Effet sec longue duré Conception a boule Roulante, ainsi facileà utiliser prévention des démangeaisons sousl'aisselle ,permet la chaleur de s’évaporer sans effetsecondair ",
+      "images": [
+      ],
+      "fonction":"Déodorant, anti transpirant longue durée",
+      "featured":false
+    },
     {
       "id": 5,
-      "name": "Hight Drunker",
-      "category": "Hearty",
-      "price": 49.99,
-      "image": "/img/16.jpg",
-      "availability": false,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-   
+      "name": " Longrich Savon noire détoxifiant et éclatant",
+      "quantite":"100 g * 3",
+      "smallDescription":"Savon noire a base charbon de bambou",
+      "category": "Soins du corps",
+      "subCategory": "savon",
+      "ingredient": ["Charbon actif de bambou de chine"," huile de coco", "thé vert", "glycérine", "extrais d’aloès Véra", "sucrose naturel"
+    ],
+      "usage": "Dermiques et capillaire (adultes, enfants),recommandé pour une utilisation quotidienne, comme gommage. Convient pour peaux mixtes et grasses. Peux laisser toute la nuit sur le visage ",
+      "tags":[
+        "antibacterien","acné","boutton","peau clair"
+      ],
+      "price": 79.99,
+      "priceDiscount": 69.99,
+      "image": "/LongrichAsset/SavonCharbon.png",
+      "availability": true,
+      "description": "Charbon de bambou : agit comme un aimant pour nettoyer les pores obstrués de la peau, en absorbent les micros saleté de la peau .un vrai exfoliant corporel. Elle est douce, nettoie les cellules en profondeur, raffermit la peau et la rend soyeuse. Riche en silice ce qui lui permet de matifier la peau et de l’adoucir en profondeur. Les propriétés antioxydants du thé vert ralentissent le vieillissement de la peau et protège contre les radicaux libres Nettoie les impuretés, les toxines et le sébum accumulés au cours de la journée touten préservant le film hydrolipidique de la peau Contient des extraits d’aloès Véra qui offre des propriétés antiseptiques etantibactériennes pour protéger les peaux jeunes etsensibles Propriétés antifongiques et antivirales qui rendent efficace contre certaines maladies de la peau Huile de coco conserve l'humidité et humidifie la peau, lutte et prévient contre lesboutons Contient de l’anion qui aide a relaxé le corps pendant le bain et lutter contre les odeurscorpore ",
+      "images": [
+      ],
+      "fonction":"antibactérien, eczéma, peau mort, sébums, acné, bouton, odeur corporel piqûre d’insectes, relaxations, dartres, l'irritation de la peau chez les adultes et les enfants et sans effet indésirables, pellicules",
+      "featured":true
+    },
     {
       "id": 6,
-      "name": "Mongo bell",
-      "category": "Lotion",
-      "price": 49.99,
-      "image": "/img/1.jpg",
+      "name": "Longrich liqueur de santé",
+      "quantite":"45g (3g X 15)",
+      "smallDescription":"Un liqueur pour votre bien en tant que consommateur ",
+      "category": "Complement Alimentaire",
+      "subCategory": "breuvage",
+      "ingredient": ["Liqueur neutre extrait de papaye", "Carthame"," Cortex Acanthopanacis radicis (wu chia pi) "
+    ],
+      "usage": "Orales (adultes hommes femmes),10 a 30ml a sec ou diluer par jour, déconseillé pour les femmes enceinte, mineurs,à consommer diluer si pas habituer à alcool, consommer de préférence en apéro",
+      "tags":[
+        "maux de tete","vertige"
+      ],
+      "price": 34.99,
+      "priceDiscount": 69.99,
+      "image": "/LongrichAsset/Liqueur de sante.png",
+      "availability": false,
+      "description": "liqueur médicale, tonique et aphrodisiaque très populaire , les liqueurs médicale occupe une position importante dans la culture chinoise. Extrait de papaye : Très riche en antioxydants, ainsi permet de lutter contre la formation en excès de radicaux libres,Cortex Acanthopanacis radicis (wu chia pi) : Le cortex est analgésique, cardiotonique, diurétique et tonique du système musculo-squelettique; Il est utilisé pour l'arthrite, les crampes,l'impuissance, les lombalgies, les pruritus et les plaintes rhumatismale ",
+      "images": [
+      ],
+      "fonction":"Traiter les problèmes rénaux, le foie, les intestins, la vision, Aide contre les troubles congestifs de la ménopause, les palpitations, les bouffées de chaleur, l’insomnie,l’irritabilité, les bourdonnements d’oreille. Rééquilibre la tension",
+      "featured":true
+    },
+    {
+      "id": 7,
+      "name": " Longrich CALCIUM Croquant 3 en 1",
+      "quantite":"45g (3g X 15)",
+      "smallDescription":"CALCIUM Croquant (zinc, fer, magnésiums)",
+      "category": "Complement Alimentaire",
+      "subCategory": "breuvage",
+      "ingredient": ["170mg carbonate de calcium", "2.8mg zinc", "3,12mg fer", "magnésium "
+    ],
+      "usage": "Interne (hommes, femmes et enfants plus de 4ans Croquer 3 à 4 comprimés en une prise 1 fois par jour pour adulte, De 4 à 10ans 1 comprimé 2 fois par jours ,De 11 a 17ans 1 comprimé 3fois par jours",
+      "tags":[
+        "","vertige",""
+      ],
+      "price": 34.99,
+      "priceDiscount": 69.99,
+      "image": "/LongrichAsset/Longrichcalicium.jpg",
+      "availability": false,
+      "description": "Le calicium est le mineral le plus abondant u corps humain, et l'un des plus importants. Le calcium est l;un des nutriments qui constituent la base de regime saint; le calcium possede mille vertus, Si ce mineral fait aussitot penser a la solidite de nos os, il joue bien d'autres roles dans notre organisme. C'est un compagnon indispensable de notre sante< Une partie d calcium participe egalement aux fonctions cardiaques, renales , nerveuses et musculaires. Aide a solidifier et maintenir en sante les os et les dents , aide a prevenir et traiter l'osteoporose et autre maladie des os ",
+      "images": [
+      ],
+      "fonction":"supplément de calcium, zinc fer et magnésium",
+      "featured":true
+    },
+    {
+      "id": 7,
+      "name": " Longrich Arthro SupReviver 700mg",
+      "quantite":"0.5g X 60 comprimés",
+      "smallDescription":"CALCIUM Croquant (zinc, fer, magnésiums)",
+      "category": "Complement Alimentaire",
+      "subCategory": "breuvage",
+      "ingredient": [ "hydrochlorure de glucosamine", "Sulfate de chondroïtine", "Extrait de thé vert"  ,"Polyphénols", "Extrait de gingembre – Gingerol, "
+    ],
+      "usage": "Orales (adultes homes et femmes),2 à 3 comprimé en une prise 2 fois par jour, Boire a jeune le matin et le soire 45mm après lesrepas",
+      "tags":[
+        "alimentaire","liqueur","boire"
+      ],
+      "price": 34.99,
+      "priceDiscount": 69.99,
+      "image": "/LongrichAsset/Longrich-Arthro.png",
+      "availability": false,
+      "description": "L 'hydro chlorure de glucosamine La glucosamine est une molécule fabriquée par le corps à partir de la glutamine, un acide aminé, et du glucose. Elle joue un rôle crucial dans le maintien de la bonne santé du cartilage des articulations. La glucosamine augmente en effet l'action lubrifiante du liquide synovial et ralenti la dégradation du cartilage, et a un effet bénéfique sur différents marqueurs de la santé des articulations. Lorsque son processus de fabrication est déréglé, les cartilages dégénèrent et l'arthrose et ses douleurs s'installent ",
+      "images": [
+      ],
+      "fonction":"pour soigner l´arthrose, les tendinites, l´épicondylite, l´épine de Lenoir, la faiblesse du système immunitaire, les maladies du cœur et des vaisseaux sanguins",
+      "featured":true
+    },
+    {
+      "id": 8,
+      "name": "Longrich Cordyceps Militaris Capsule",
+      "quantite":"(0.5g X60 capsules)",
+      "smallDescription":"Cordyceps Militaris anti-biotique",
+      "category": "Complement Alimentaire",
+      "subCategory": "breuvage",
+      "ingredient": [ "Cordycepin (3'Deoxyadenosine)", "Acide Cordycepic (D-Mannitol)", "Nucléosides", 
+"Adénosine (uracile, uridine, déoxyuridine, guanoside, thymidine)", "Polysaccharide Cordyceps","Stérols ergostérol (béta-sitostérol, daucostérol, campestérol) SOD","Sélénium (SE) "
+    ],
+      "usage": "Orales (adultes homes et femmes),1- 2 gélules 2 fois par jours le matin a jeune et le soir 45mm avant ou après les repas",
+      "tags":[
+        "alimentaire","liqueur","boire"
+      ],
+      "price": 34.99,
+      "priceDiscount": 69.99,
+      "image": "/LongrichAsset/Longrich-cordyceps.png",
       "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
+      "description": "Des études, ont démontré l'efficacité du Cordyceps dans nombres problèmes de santé et affections.Stimulation sexuelle et dysfonction érectile. Les études, en double aveugle, effectuées sur plus de 1000 hommes et femmes ont démontré un effet tonique sur les fonctions sexuelles déficientes ",
+      "images": [
+      ],
+      "fonction":"Stimulant général physiques, sexuelles et intellectuelles. Fatigue générale, épuisement nerveux, Dysfonction érectile, Problèmes cardiaques, Taux élevé de cholestérol, Troubles rénaux, Faiblesse et problèmes hépatiques, Faiblesse pulmonaire et des bronches, Faiblesse du système immunitaire, Augmentation des performances athlétiques",
+      "featured":false
     }
     ,
     {
       "id": 9,
-      "name": "Derman Lotion",
-      "category": "Lotion",
-      "price": 49.99,
-      "image": "/img/2.jpg",
+      "name": "Longrich savon  a base the Blanc",
+      "quantite":"100g",
+      "smallDescription":"Savon transparent et efficace à base de thé blanc",
+      "category": "Soins du corps",
+      "subCategory": "breuvage",
+      "ingredient": [ "Thé blanc" ," huile de coco","miel"
+    ],
+      "usage": "Dermiques et capillaire (adultes, enfants), recommandé pour une utilisation quotidienne, comme gommage. Convient pour peaux mixtes et grasses. Peux laisser toute la nuit sur le visage",
+      "tags":[
+        "alimentaire","liqueur","boire"
+      ],
+      "price": 34.99,
+      "priceDiscount": 69.99,
+      "image": "/LongrichAsset/retryLong.png",
       "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
+      "description": "Le thé blanc favorise une peau saine et éclatante en neutralisant les radicaux libres car très riche en antioxydant,Aide à traiter et prévenir l’acné en éliminant les excès de toxines et gardent ainsi votre peau pure et sans lésions causées parl’acné",
+      "images": [
+      ],
+      "fonction":"Stimulant général physiques, sexuelles et intellectuelles. Fatigue générale, épuisement nerveux, Dysfonction érectile, Problèmes cardiaques, Taux élevé de cholestérol, Troubles rénaux, Faiblesse et problèmes hépatiques, Faiblesse pulmonaire et des bronches, Faiblesse du système immunitaire, Augmentation des performances athlétiques",
+      "featured":false
     }
     ,
     {
       "id": 10,
-      "name": "Gralon ",
-      "category": "Hyper good",
-      "price": 49.99,
-      "image": "/img/3.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 11,
-      "name": "Graloner",
-      "category": "Hyper good",
-      "price": 49.99,
-      "image": "/img/4.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 12,
-      "name": "peter",
-      "category": "Hyper good",
-      "price": 49.99,
-      "image": "/img/5.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 13,
-      "name": "Vertilan",
-      "category": "Hyper good",
-      "price": 49.99,
-      "image": "/img/6.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 14,
-      "name": "Mytho Drover",
-      "category": "Lifestyle",
-      "price": 49.99,
-      "image": "/img/7.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 15,
-      "name": "Jucui",
-      "category": "Lifestyle",
-      "price": 49.99,
-      "image": "/img/8.jpg",
-      "availability": false,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 16,
-      "name": "Marler",
-      "category": "Lifestyle",
-      "price": 49.99,
-      "image": "/img/9.jpg",
-      "availability": false,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 45,
-      "name": "Brigh Hight",
-      "category": "Lifestyle",
-      "price": 49.99,
-      "image": "/img/10.jpg",
-      "availability": false,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 17,
-      "name": "Bright Top",
-      "category": "Lifestyle",
-      "price": 49.99,
-      "image": "/img/11.jpg",
-      "availability": false,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 18,
-      "name": "Myc Nicer",
-      "category": "Lifestyle",
-      "price": 49.99,
-      "image": "/img/12.jpg",
-      "availability": false,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 19,
-      "name": "Baby Boomer",
-      "category": "Good life",
-      "price": 49.99,
-      "image": "/img/13.jpg",
-      "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
+      "name": "Longrich creme pour les mains",
+      "quantite":"200ml",
+      "smallDescription":"Rend tes mains plus douces",
+      "category": "Soins du corps",
+      "subCategory": "creme",
+      "ingredient": [ "Thé blanc" ," huile de coco","ODT"
+    ],
+      "usage": "Dermiques et capillaire (adultes, enfants), recommandé pour une utilisation quotidienne, comme gommage. Convient pour peaux mixtes et grasses. Peux laisser toute la nuit sur le visage",
+      "tags":[
+        "alimentaire","liqueur","boire"
       ],
+      "price": 34.99,
+      "priceDiscount": 69.99,
+      "image": "/LongrichAsset/longrichcreme.png",
       "availability": true,
-      "description": "Brew your morning coffee easily."
-      
+      "description": "Le thé blanc favorise une peau saine et éclatante en neutralisant les radicaux libres car très riche en antioxydant,Aide à traiter et prévenir l’acné en éliminant les excès de toxines et gardent ainsi votre peau pure et sans lésions causées parl’acné",
+      "images": [
+      ],
+      "fonction":"Stimulant général physiques, sexuelles et intellectuelles. Fatigue générale, épuisement nerveux, Dysfonction érectile, Problèmes cardiaques, Taux élevé de cholestérol, Troubles rénaux, Faiblesse et problèmes hépatiques, Faiblesse pulmonaire et des bronches, Faiblesse du système immunitaire, Augmentation des performances athlétiques",
+      "featured":false
     }
-    ,
-    {
-      "id": 20,
-      "name": "Blacky ui",
-      "category": "Good life",
-      "price": 49.99,
-      "image": "/img/14.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 21,
-      "name": "Waverin tin",
-      "category": "Good life",
-      "price": 49.99,
-      "image": "/img/15.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 22,
-      "name": "Juingong ",
-      "category": "Good life",
-      "price": 49.99,
-      "image": "/img/35.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 23,
-      "name": "Balistica ",
-      "category": "Good life",
-      "price": 49.99,
-      "image": "/img/34.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 24,
-      "name": "Dream Oper ",
-      "category": "High Health",
-      "price": 99.99,
-      "image": "/img/18.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 25,
-      "name": "Croco mid",
-      "category": "Delight me",
-      "price": 99.99,
-      "image": "/img/19.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 26,
-      "name": "Try olic",
-      "category": "Hearty",
-      "price": 99.99,
-      "image": "/img/20.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 27,
-      "name": "Kill peaner",
-      "category": "Hearty",
-      "price": 99.99,
-      "image": "/img/21.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 28,
-      "name": "Dracer",
-      "category": "Hearty",
-      "price": 99.99,
-      "image": "/img/23.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 29,
-      "name": "Bringy Cover",
-      "category": "Hearty",
-      "price": 99.99,
-      "image": "/img/24.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 30,
-      "name": "jomster",
-      "category": "Diver",
-      "price": 99.99,
-      "image": "/img/25.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 31,
-      "name": "Blackor",
-      "category": "Diver",
-      "price": 109.99,
-      "image": "/img/26.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 32,
-      "name": "Peacefull in",
-      "category": "Diver",
-      "price": 109.99,
-      "image": "/img/27.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
-    ,
-    {
-      "id": 33,
-      "name": "Rafirmo",
-      "category": "Diver",
-      "price": 109.99,
-      "image": "/img/28.jpg",
-      "availability": true,
-      "description": "Brew your morning coffee easily.",
-       "images": [
-        "/img/13.jpg",
-        "/img/12.jpg",
-        "/img/11.jpg",
-        "/img/10.jpg"
-      ]
-    }
+   
   ]
   

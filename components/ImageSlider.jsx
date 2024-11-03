@@ -15,10 +15,10 @@ const ImageSlider = ({ lifestyleProducts }) => {
   };
 
   return (
-    <div className="relative pt-8 pb-8 m w-ma mx-auto bg max-w-2xl bg-gray-00">
+    <div className="relative bg-gray-200 pt-8 pb-8 m w-ma mx-auto bg max-w-4xl bg-gray-00">
       <div
         ref={sliderRef}
-        className="flex mx-auto lg:max-w-2xl relative overflow-x-scroll no-scrollbar hide-scrollbar scroll-smooth gap-4 px-4"
+        className="flex mx-auto lg:max-w-3xl relative overflow-x-scroll no-scrollbar hide-scrollbar scroll-smooth gap-4 px-4"
       >
         {lifestyleProducts.map((product, index) => (
           <SingleProduct key={index} product={product} />

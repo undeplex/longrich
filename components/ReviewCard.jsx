@@ -23,7 +23,7 @@ function ReviewCard({ review }) {
   };
 
   return (
-    <div className="p-6 mb-4 bg-white   rounded-lg">
+    <div className="p-4 mb-4  w-full bg-white   rounded-lg">
       <div className="flex items-center mb-2">
         {renderStars()}
 

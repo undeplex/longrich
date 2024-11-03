@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Join() {
   return (
-    <div className="pb-12 rounded-br-2xl bg-emerald-500   w-full p-3 lg:p-5 md:p-4  text-fuchsia-50">
+    <div className="pb-12 rounded-br-2xl my-5 bg-emerald-500   w-full p-3 lg:p-5 md:p-4  text-fuchsia-50">
 
 
             <div className=" wmax  mx-auto">
@@ -12,12 +12,12 @@ export default function Join() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
           </svg>
 
-                <h1 className="play text-center font-bold text-4xl text-white   ">
+                <h1 className=" text-center font-bold text-4xl text-white   ">
                    Tu veux devenir partenaire ?
                 </h1>
                 <p className="text-left lg:w-8/12 mx-auto md:text-center   my-5 te text-gray-100">
                 Etant distributeur de produit Longrich tu as control sur ton temps de travail en plus d'etre
-                remunerer pour tes efforts de ventes
+                remunerer pour tes efforts de ventes avec de BONUS 
                 </p>
                 <Link href="/adhesion">
                 <button className="w-full max-w-[423px]   space-x-2 mx-auto flex items-center bg-white text-black justify-center py-3 px-5">

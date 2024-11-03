@@ -1,22 +1,29 @@
 import React from 'react'
 import TextSlider from './TextSlider'
 import Link from 'next/link'
+import { ShoppingBagIcon } from '@heroicons/react/24/solid'
+import { ArrowUp } from 'lucide-react'
 export default function HomeBanner() {
   return (
-    <div className="px-3">
-      <div className="rounded-xl w-11/12 mx-auto h-[190px]  overflow-hidden px-">
-        <img src="/feat.jpeg" className="w-full h-full object-cover"/>
-      </div>
-        <p className="text-sm text-left pl-4 text-gray-400">Savon de Bambo efficace contre les acnees</p>
-      <TextSlider/>
-      <p className="text-gray-700 text-xl my-3">
-        Longrich Store vous proposes de produits de Qualité; certifier et naturel qui
-        marchent avec guarantie de retour d'achat à 100%
-      </p>
-      <Link href="/products">
+    <div className="px-4 mt-3 md:mt-0">
       
-      <button className="text-xl bg-emerald-500 bg-opacity-15 px-4 py-3 rounded-full underline-offset-1 mx-auto block my-5 text-emerald-500">VISITER NOTRE SHOP</button>
+     
+      
+      
+      <div className="text-xl mb-7 bg-gray-100 rounded-xl p-4 max-w-[450px] mx-auto">
+          Utiliser des produits de santé et cosmétique qui bousterons votre quotidient ,
+          parceque vous le meritez
+          <Link href="/products">
+      
+      <button className="text-lg lg:w-8/12 bg-white text-black fset-1 mx-auto flex items-center px-5 py-3 rounded-full mx- mt-3">Visiter notre shop<ShoppingBagIcon className="size-6 text-gray-600"/></button>
       </Link>
+        </div>
+      <ArrowUp className="mx-auto"/>
+        <p className="text-gray-700 text-sm underlin my-3 w mx-auto">
+        Longrich Store vous proposes de produits de Qualité; certifier et naturel qui
+        marchent avec guarantie de retour d'achat à 100%,Cliquer sur visiter notre shop 
+        pour voir notre catalogue de produit 
+      </p>
     </div>
   )
 }

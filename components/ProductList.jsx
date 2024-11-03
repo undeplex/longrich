@@ -80,7 +80,7 @@ export default function ProductList({ products }) {
 
             <img src={product.image} alt={product.name} className="rounded-xl h-full w-[160px] object-cover" />
           </div>
-            <h2 className="text-xl my-2 font-semibold bg-purpl  h-[78px] w-11/12 mt-">{product.name} </h2>
+            <h2 className=" my-2 font-semibold bg-purpl  h-[78px] w-11/12 mt-">{product.name} </h2>
 
             <p className="text-gray-600 text-  h-[72px] g-red-400 w-full brea truncatebreak-normal">{product.smallDescription}</p>
             <p className="text-gray-800 underline">Q.{product.quantite}</p>

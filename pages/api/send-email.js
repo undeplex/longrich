@@ -19,12 +19,13 @@ export default async function handler(req, res) {
   // Construct HTML for cart items
   const cartItemsHtml = cart.map((item) => `
     <tr>
-      <td style="padding: 8px; border: 1px solid #ddd;">
+      <td style="padding: 8px; border-bottom: 1px solid #ddd; background: white;">
+
         <img src="${item.image}" alt="${item.name}" width="50" height="50" style="display: block; margin: auto;">
       </td>
-      <td style="padding: 8px; border: 1px solid #ddd; text-align: left;">${item.name}</td>
-      <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">${item.quantity}</td>
-      <td style="padding: 8px; border: 1px solid #ddd; text-align: right;">$${item.price}</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd; text-align: left;">${item.name}</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd; text-align: center;">${item.quantity}</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd; text-align: right;">$${item.price}</td>
     </tr>
   `).join('');
 

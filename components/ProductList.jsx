@@ -77,7 +77,7 @@ export default function ProductList({ products }) {
             
             </>}
          
-          <div className="px-9 bg-gray grid place-content-center h-[122px] mb-4">
+          <div className="px-9 bg-gray grid place-content-center overflow-hidden max-w-[170px] h-[122px] mb-4">
 
             <img src={product.image} alt={product.name} className="rounded-xl h-full w-[160px] object-cover" />
           </div>

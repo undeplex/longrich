@@ -9,28 +9,28 @@ export default function CategorySelect() {
         <div className="flex flex-wrap gap-3 mt-4 mb-4 ">
 
             <Link href="/category/Soins corporel">
-                <button className="px-5 py-3 rounded-full border-black border">
+                <button className="px-5 text-sm py-3 hover:border-none  hover:bg-gray-100 b-rgr rounded-full border-black border">
                     Cosmetique
                 </button>
             </Link>
             <Link href="/">
-                <button className="px-5 py-3 rounded-full border-black border">
+                <button className="px-5 text-sm py-3 hover:border-none  hover:bg-gray-100 b-rgr rounded-full border-black border">
                     Complement Alimentaire
                 </button>
             </Link>
             <Link href="/">
-                <button className="px-5 py-3 rounded-full border-black border">
+                <button className="px-5 text-sm py-3 hover:border-none  hover:bg-gray-100 b-rgr rounded-full border-black border">
                    Produits de santé
                 </button>
             </Link>
             <Link href="/">
-                <button className="px-5 py-3 rounded-full border-black border">
+                <button className="px-5 text-sm py-3 hover:border-none  hover:bg-gray-100 b-rgr rounded-full border-black border">
                    Divers & Autres
                 </button>
             </Link>
            
-            <Link href="/">
-                <button className="px-5 py-3 rounded-full border-black border">
+            <Link href="/products">
+                <button className="px-5 text-sm py-3 hover:border-none  hover:bg-gray-100 b-rgr rounded-full border-black border">
                     Tous les produits
                 </button>
             </Link>

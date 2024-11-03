@@ -56,36 +56,35 @@ export default function ProductPage({ product, relatedProducts }) {
     }, 1500); // Simulate loading delay
   };
   return (
-    <div className="py-6 px-3 max-w-5xl  mx-auto">
-      <div className="mx-auto w-max">
-      {popup && <p className="text-green-500 my-3">{product.name} a été ajouter dans le panier avec success</p>}
+    <div className=" px-3 max-w-5xl relative  mx-auto">
+      <div className="mx-auto w-max ">
 
       </div>
-      <div className=" flex pt-[64px] lg:flex-row md:flex-row flex-col lg:gap-16  md:gap-7">
+      <div className=" flex lg:flex-row md:flex-row flex-col lg:gap-16  md:gap-7">
            <div className=" md:w-5/12">
 
                 <div className="breadcrumb-mockup text-[16px] bg w-max">
-                <div className="flex items-center  ">
+                <div className=" mt-5 ">
                     <a href="/">
-                    <Home className="size-4 text-gray-700"/>
+                    <Home className="size-4 inline text-gray-700"/>
                     </a>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+                   
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 inline">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                         </svg>
-                    </div>
+                   
                     <a href="/products">catalogue</a>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+                  
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 inline">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                         </svg>
-                    </div>
+                  
                     <a href={`/category/${product.category.toLowerCase()}`} className="">{product?.category}</a>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+                  
+                        {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 inline">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                         </svg>
-                    </div><span className="truncate m max-w-[160px] sm:max-w-[500px]">{product.name}</span>
+                    <span className="truncate m max-w-[160px] sm:max-w-[500px]">{product.name}</span> */}
                     
                 </div>
 
@@ -105,7 +104,9 @@ export default function ProductPage({ product, relatedProducts }) {
                             </svg>
                            
                 <p className="text-sm">(89 Avis )</p>
+
                 </div>
+                {popup && <p className="text-green-500 right-0 bg-white my-3">{product.name} a été ajouter dans le panier avec success</p>}
                <div className="text-gray-500  my-4 ">
                {/* <p dangerouslySetInnerHTML={{ __html: product?.description }}></p>  */}
                 </div> 
@@ -114,6 +115,7 @@ export default function ProductPage({ product, relatedProducts }) {
                                 <p className="text-2xl font-bold   ">USD ${product.price}</p>
           </div> 
                                 <p className="text-lg  text-gray-600 my-3">{product.smallDescription}</p>
+                                <p className="">Arome: Menthe </p>
                                 <p className="">Contenu net: {product.quantite}</p>
 
                                 <p className="mt-2">

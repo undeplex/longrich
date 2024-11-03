@@ -46,7 +46,7 @@ export default function CategoryPage({ initialProducts, category }) {
   };
 
   return (
-    <div className="py-8 max-w-5xl mx-auto">
+    <div className="py-8 bg max-w-5xl mx-auto">
         <div className="flex mb-3">
         <div className="breadcrumb-mockup px-3 text-[16px] bg w-max">
                 <div className="flex items-center  ">

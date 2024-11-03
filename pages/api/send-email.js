@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
   // Construct cart items for the email body
   const cartSummary = cart.map((item) =>
-    `- ${item.name}: ${item.quantity} x $${item.price}`
+    `- ${item.name}: ${item.image} ${item.quantity} x $${item.price} ${item.image}`
   ).join('\n');
 
   const orderSummary = `

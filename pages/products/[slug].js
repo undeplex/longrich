@@ -285,11 +285,11 @@ export default function ProductPage({ product, relatedProducts }) {
 
             <img src={product.image} alt={product.name} className="rounded-xl h-full w-[160px] object-cover" />
           </div>
-            <h2 className="text-xl my- font-semibold bg-purpl  h-[70px] mb-3 w-11/12 mt-">{product.name} </h2>
+            <h2 className=" my- font-semibold bg-purpl  h-[70px] mb-3 w-11/12 ">{product.name} </h2>
 
            
             <p className="text-gray-600 underline">Q.{product.quantite}</p>
-          {product.availability ? <span className="text-green-500">Disponible en stock</span>  :<span className="text-red-500">Pas Disponible en stock</span> }
+          {product.availability ? <span className="text-green-500">Disponible en stock</span>  :<span className="text-red-500">No Stock Disponible</span> }
           </Link>
             <div className="flex my-3 gap-5 items-center justify-between">
         <span className="text-2xl">${product.price}</span>

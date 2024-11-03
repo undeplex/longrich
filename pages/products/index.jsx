@@ -101,7 +101,7 @@ export default function ProductsPage({ products, categories }) {
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 8;
+  const itemsPerPage = 9;
   const offset = currentPage * itemsPerPage;
   const currentItems = filteredProducts.slice(offset, offset + itemsPerPage);
   const pageCount = Math.ceil(filteredProducts.length / itemsPerPage);

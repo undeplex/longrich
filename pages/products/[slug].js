@@ -4,14 +4,14 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useAtom } from 'jotai';
 import { cartAtom } from '../../atoms/cartAtom';
-
 import { ChevronDown, Home, LucideRocket, RocketIcon, ShoppingCart } from 'lucide-react';
 import Loader from '@/components/Loader';
 import LoaderWhite from '@/components/LoaderWhite';
 import Perks from '@/components/Perks';
 import ProductList from '@/components/ProductList';
 import { FireIcon } from '@heroicons/react/24/solid';
-
+import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 
 export async function getServerSideProps(context) {
   const { slug } = context.params;
@@ -56,7 +56,66 @@ export default function ProductPage({ product, relatedProducts }) {
     }, 1500); // Simulate loading delay
   };
   return (
+    <>
+      <NextSeo
+        title={`${product.name} - Buy Now at My E-commerce Site`}
+        description={`${product.smallDescription}. Available for USD $${product.price}.`}
+        canonical={`https://www.longrich.vercel.app/product/${product.name}`}
+        openGraph={{
+          url: `https://www.longrich.vercel.app/product/${product.name}`,
+          title: `${product.name} - My E-commerce Site`,
+          description: product.smallDescription,
+          images: [
+            {
+              url: product.image,
+              width: 800,
+              height: 600,
+              alt: `${product.name} Image`,
+            },
+          ],
+          type: 'product',
+          product: {
+            price: {
+              amount: product.price,
+              currency: 'USD',
+            },
+            availability: product.availability ? 'InStock' : 'OutOfStock',
+            condition: 'New',
+          },
+        }}
+        twitter={{
+          handle: '@longrich',
+                   site: '@longrich',
+                      cardType: 'summary_large_image',
+        }}
+      />
+      
+      {/* Structured Data for Product */}
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Product",
+              name: product.name,
+              image: [product.image],
+              description: product.smallDescription,
+              sku: product.id,
+              offers: {
+                "@type": "Offer",
+                url: `https://www.longrich.vercel.app/product/${product.name}`,
+                priceCurrency: "USD",
+                price: product.price,
+                availability: product.availability ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+                itemCondition: "https://schema.org/NewCondition",
+              },
+            }),
+          }}
+        />
+      </Head>
     <div className=" px-3 max-w-5xl relative  mx-auto">
+     
       <div className="mx-auto w-max ">
 
       </div>
@@ -257,5 +316,6 @@ export default function ProductPage({ product, relatedProducts }) {
         </div>
       
     </div>
+    </>
   );
 }

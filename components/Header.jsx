@@ -24,8 +24,8 @@ export default function Header() {
 
         <Link href="/">
         <h1 className="flex items-center text-sm xt-lg gap-2">
-            By
-            <img src="/doic.svg" className="inver w-[80px]"/>Dev
+
+            <img src="/longdark.png" className="invert w-[90px]"/>store
         </h1>
         </Link>
         <div className="flex gap-2 items-center">   

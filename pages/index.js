@@ -21,9 +21,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Navigation, Pagination } from 'swiper/modules';
 import FeaturedCarousel from '@/components/FeaturedCaroussel';
-
-
-
+import Head from 'next/head';
 import { useAtom } from 'jotai';
 import { cartAtom } from '../atoms/cartAtom';
 import { ShoppingBagIcon } from '@heroicons/react/24/solid';
@@ -76,7 +74,19 @@ export default function Index({ lifestyleProducts, reviews, lotionProducts, dive
   };
   return (
     <div className="relative max-w-5xl mx-auto  z-30 pt-6 bg-gray-">
+      <Head>
+        <title>Découvrez nos produits - Votre boutique en ligne</title>
+        <meta name="description" content="Explorez notre gamme de produits de soins corporels et compléments alimentaires, les plus vendus et appréciés par nos clients." />
+        <meta name="keywords" content="soins corporels, compléments alimentaires, boutique en ligne, produits populaires" />
+        <meta property="og:title" content="Découvrez nos produits - Votre boutique en ligne" />
+        <meta property="og:description" content="Explorez notre gamme de produits de soins corporels et compléments alimentaires, les plus vendus et appréciés par nos clients." />
+        <meta property="og:image" content="/longrich.jpg" /> {/* Change to a valid image URL */}
+        <meta property="og:url" content="https://www.longrich.vercel.app" /> {/* Replace with your actual URL */}
+        <link rel="canonical" href="https://www.longrich.vercel.app" /> {/* Replace with your actual URL */}
+      </Head>
+      
       <div>
+     
       {/* <TextSlider/> */}
       <TextSlider/>
       <div className="bg flex items-center fleco flex-col md:flex-row gap-3">

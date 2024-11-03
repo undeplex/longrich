@@ -205,7 +205,7 @@ export default function ProductPage({ product, relatedProducts }) {
 <Perks/>
 
         <h2 className="text-2xl my-3 font-semibold mt-8">Les produits si dessous pourraient aussi vous interessez</h2>
-        <div className="grid grid-cols-1  bg- md:grid-cols-3 gap-4  px- ">
+        <div className="grid grid-cols-2 bg- md:grid-cols-3 gap-4  px- ">
       {relatedProducts.map((product) => (
         <div key={relatedProducts.id} className=" px- red-200 max-w-[340px] my-3 bg mx-auto rounded bg-gray-0">
           <Link href={`/products/${encodeURIComponent(product.name || 'undefined-product')}`}>
@@ -228,7 +228,7 @@ export default function ProductPage({ product, relatedProducts }) {
           </div>
             <h2 className="text-xl my- font-semibold bg-purpl  h-[70px] mb-3 w-11/12 mt-">{product.name} </h2>
 
-            <p className="text-gray-600 text-  h-[px] g-red-400 w-full brea truncatebreak-normal">{product.smallDescription}</p>
+           
             <p className="text-gray-600 underline">Q.{product.quantite}</p>
           {product.availability ? <span className="text-green-500">Disponible en stock</span>  :<span className="text-red-500">Pas Disponible en stock</span> }
           </Link>

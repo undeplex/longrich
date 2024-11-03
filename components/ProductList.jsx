@@ -62,7 +62,7 @@ export default function ProductList({ products }) {
   return (
     <div className="grid grid-cols-2  bg- md:grid-cols-3 gap-4  px-3 ">
       {products.map((product) => (
-        <div key={product.id} className="p-4 my-3 px-3 red-200 max-w-[340px]  border-b-2 mx-auto ">
+        <div key={product.id} className="px-1 py-4 my-3 red-200 max-w-[340px]  border-b-2 mx-auto ">
           <Link href={`/products/${encodeURIComponent(product.name || 'undefined-product')}`}>
             {product.featured && <>
               <div className="text-white w-max text-sm bg-emerald-500 -rotate-[23deg] g-opacity-15 px-3 py-2">
@@ -98,7 +98,7 @@ export default function ProductList({ products }) {
 
       </button>
       </div>
-        <span className="underline">{product.category.toUpperCase()}</span>
+        <span className="underline text-sm">{product.category.toUpperCase()}</span>
       {popup && <p className="text-green-500 mt-2">{product.name} added to cart</p>}
           {/* <button
             onClick={() => handleAddToCart(product)}

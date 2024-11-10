@@ -171,10 +171,10 @@ export default function ProductPage({ product, relatedProducts }) {
                 </div> 
           
           <div className="flex gap-2 items-center mt-4 mb-2">
-                                <p className="text-2xl font-bold   ">USD ${product.price}</p>
+                                <p className=" font-bold   ">USD ${product.price}</p>
           </div> 
-                                <p className="text-lg  text-gray-600 my-3">{product.smallDescription}</p>
-                                <p className="">Arome: Menthe </p>
+                                <p className="  text-gray-600 my-3">{product.smallDescription}</p>
+                              
                                 <p className="">Contenu net: {product.quantite}</p>
 
                                 <p className="mt-2">

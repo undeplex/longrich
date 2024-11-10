@@ -154,8 +154,8 @@ export default function ProductPage({ product, relatedProducts }) {
 
    <div className=" lg:w-9/12 md:w-/12  lg:pt-10 md:pt-9">
 
-        <p>LONGRICH STOCK l'shi</p>
-    <h2 className="font-bold ply lg:text-3xl  text-3xl justify-between flex gap-2 items-center"> {product.name} </h2>                           
+        
+    <h2 className="font-bold ply lg:text-3xl  text-xl justify-between flex gap-2 items-center"> {product.name} </h2>                           
                 <div className="flex gap-1 my-1 items-center  play">
                     <span className="play font-bold text-lg text-0 -yellosm:w-7 w-70">4.3 </span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5 text-yellow-500 sm:w-7 w-70">
